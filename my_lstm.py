@@ -12,7 +12,7 @@ from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 
 data = pd.read_csv('carotid_101518_modified.csv')
-data = data.loc[0:20, :]
+# data = data.loc[0:20, :]
 data.dropna(subset=['CONTENT'], axis=0, inplace=True)
 text_arr = []
 label_arr = []
@@ -46,9 +46,10 @@ model.add(Dense(n_class))
 model.add(Activation("sigmoid"))
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 
-model.fit(x_train, Y_train, batch_size=32, epochs=1, validation_split=0.2)
+model.fit(x_train, Y_train, batch_size=32, epochs=50, validation_split=0.2)
 y_pred_p = model.predict(x_test)
 
-with open(current_path, 'wb') as file_pi:
-    pickle.dump(y_pred_p, file_pi)
+with open(os.path.join(current_path, 'predict_y.pickle'), 'wb') as file_pi:
+    result = np.concatenate((y_pred_p, Y_test), axis=1)
+    pickle.dump(result, file_pi)
 print('done')
