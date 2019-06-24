@@ -35,8 +35,6 @@ for index, row in data.iterrows():
                 sentence = sentence.replace('%', ' percent')
                 processed_sentence += sentence+' '
         processed_sentence = re.sub(' +', ' ', processed_sentence)
-        print(processed_sentence)
-        print('==')
         text_arr.append(processed_sentence)
         label_arr.append(label)
 text_arr = np.array(text_arr)
