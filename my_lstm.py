@@ -78,7 +78,9 @@ history = model.fit(x_train, Y_train,
                         ReduceLROnPlateau(factor=0.5, patience=20, verbose=1),
                         ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                     ])
-
+# History
+with open(os.path.join(current_path, 'history.pickle'), 'wb') as file_pi:
+    pickle.dump(history, file_pi)
 # result
 y_pred_p = model.predict(x_test)
 with open(os.path.join(current_path, 'predict_y.pickle'), 'wb') as file_pi:
