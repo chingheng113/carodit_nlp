@@ -11,6 +11,8 @@ from keras.layers.core import Activation, Dense
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM
 from keras.models import Sequential
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
+
 
 # read data
 data = pd.read_csv('carotid_101518_modified.csv')
@@ -43,7 +45,7 @@ label_arr = np.array(label_arr)
 # tokenize
 tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
 tokenizer.fit_on_texts(text_arr)
-vocab_size = len(tokenizer.word_counts)+2
+n_words = len(tokenizer.word_counts)
 # print( tokenizer.word_index)
 # print( tokenizer.word_docs)
 t2s = tokenizer.texts_to_sequences(text_arr)
@@ -53,15 +55,29 @@ t2s_pad = sequence.pad_sequences(t2s, maxlen=MAX_SENTENCE_LENGTH)
 # Train, Test split
 x_train, x_test, Y_train, Y_test = train_test_split(t2s_pad, label_arr, test_size=0.2, random_state=42)
 
+# config
+config = dict()
+config['batch_size'] = 15
+config['epochs'] = 20
+config['n_hidden'] = 128
+config['n_class'] = label_arr[0].shape[0]
+config['input_dim'] = min(2000, n_words)+2
+config['output_dim'] = 128
 # model
-n_class = label_arr[0].shape[0]
 model = Sequential()
-model.add(Embedding(vocab_size, 128, input_length=MAX_SENTENCE_LENGTH))
-model.add(LSTM(64, dropout=0.2, recurrent_dropout=0.2))
-model.add(Dense(n_class))
+model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
+model.add(LSTM(config['n_hidden'], dropout=0.2, recurrent_dropout=0.2))
+model.add(Dense(config['n_class']))
 model.add(Activation("sigmoid"))
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
-model.fit(x_train, Y_train, batch_size=32, epochs=50, validation_split=0.2)
+history = model.fit(x_train, Y_train,
+                    batch_size=config['batch_size'],
+                    epochs=config['epochs'],
+                    validation_split=0.2,
+                    callbacks=[
+                        ReduceLROnPlateau(factor=0.5, patience=20, verbose=1),
+                        ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
+                    ])
 
 # result
 y_pred_p = model.predict(x_test)
