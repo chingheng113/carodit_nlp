@@ -32,8 +32,8 @@ for index, row in data.iterrows():
             if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
                 # no chinese sentence
                 if re.search('(>\s*\d+|<\s*\d+)', sentence):
-                    sentence = sentence.replace('>', ' greater than ')
-                    sentence = sentence.replace('<', ' less than ')
+                    sentence = sentence.replace('>', ' greater ')
+                    sentence = sentence.replace('<', ' less ')
                 sentence = sentence.replace('%', ' percent')
                 processed_sentence += sentence+' '
         processed_sentence = re.sub(' +', ' ', processed_sentence)
@@ -57,9 +57,9 @@ x_train, x_test, Y_train, Y_test = train_test_split(t2s_pad, label_arr, test_siz
 
 # config
 config = dict()
-config['batch_size'] = 15
-config['epochs'] = 20
-config['n_hidden'] = 128
+config['batch_size'] = 16
+config['epochs'] = 50
+config['n_hidden'] = 64
 config['n_class'] = label_arr[0].shape[0]
 config['input_dim'] = min(2000, n_words)+2
 config['output_dim'] = 128
@@ -75,7 +75,7 @@ history = model.fit(x_train, Y_train,
                     epochs=config['epochs'],
                     validation_split=0.2,
                     callbacks=[
-                        ReduceLROnPlateau(factor=0.5, patience=20, verbose=1),
+                        ReduceLROnPlateau(factor=0.5, patience=5, verbose=1),
                         ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                     ])
 # History
