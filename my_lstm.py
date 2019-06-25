@@ -57,7 +57,7 @@ x_train, x_test, Y_train, Y_test = train_test_split(t2s_pad, label_arr, test_siz
 
 # config
 config = dict()
-config['batch_size'] = 16
+config['batch_size'] = 32
 config['epochs'] = 50
 config['n_hidden'] = 64
 config['n_class'] = label_arr[0].shape[0]
