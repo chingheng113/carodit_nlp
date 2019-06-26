@@ -61,7 +61,7 @@ config = dict()
 config['batch_size'] = 32
 config['epochs'] = 50
 config['n_hidden'] = 64
-config['n_class'] = Y_train.shape[0]
+config['n_class'] = Y_train.shape[1]
 config['input_dim'] = min(2000, len(tokenizer.word_counts))+2
 config['output_dim'] = 128
 # model
