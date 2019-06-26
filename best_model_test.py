@@ -12,7 +12,7 @@ model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"]
 y_pred_p = model.predict(t2s_test_pad)
 print(y_pred_p)
 for i in range(0, 17):
-    p_label = Y_test[:, i]
+    p_label = y_pred_p[:, i]
     p_label_b = (p_label > 0.5).astype(int)
     t_label = Y_test[:, i]
     fpr, tpr, thresholds = roc_curve(t_label, p_label)
