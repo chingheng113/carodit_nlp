@@ -67,7 +67,7 @@ config['output_dim'] = 128
 # model
 model = Sequential()
 model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
-model.add(LSTM(config['n_hidden'], dropout=0.2, recurrent_dropout=0.2))
+model.add(LSTM(config['n_hidden'], dropout=0.2, recurrent_dropout=0.2, return_sequences=True))
 model.add(LSTM(config['n_hidden']/2, dropout=0.2, recurrent_dropout=0.2))
 model.add(Dense(config['n_class']))
 model.add(Activation("sigmoid"))
