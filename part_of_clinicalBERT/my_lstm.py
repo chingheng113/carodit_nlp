@@ -1,7 +1,6 @@
 import numpy as np
 import os
 import sys
-from carotid_data import data_util
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
@@ -13,7 +12,8 @@ from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 import argparse
 current_path = os.path.dirname(__file__)
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
-
+sys.path.append('../')
+from carotid_data import data_util
 
 def setup_parser():
     parser = argparse.ArgumentParser()
@@ -22,6 +22,7 @@ def setup_parser():
                         type=str,
                         required=True,
                         help="Which data round will be using")
+    return parser
 
 def main():
     parser = setup_parser()
