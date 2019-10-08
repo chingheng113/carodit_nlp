@@ -3,7 +3,7 @@ import numpy as np
 import os
 import sys
 import re
-import data_util
+from carotid_data import data_util
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
@@ -39,7 +39,10 @@ for index, row in data.iterrows():
                 processed_sentence += sentence+' '
         processed_sentence = re.sub(' +', ' ', processed_sentence)
         text_arr.append(processed_sentence)
-        label_arr.append(label)
+        if sum(label) == 0:
+            label_arr.append([1,0])
+        else:
+            label_arr.append([0,1])
 text_arr = np.array(text_arr)
 label_arr = np.array(label_arr)
 # Train, Test split
@@ -52,17 +55,17 @@ t2s_test = tokenizer.texts_to_sequences(x_test)
 # padding
 MAX_SENTENCE_LENGTH = max(len(max(t2s_train, key=len)), len(max(t2s_test, key=len)))
 t2s_train_pad = sequence.pad_sequences(t2s_train, maxlen=MAX_SENTENCE_LENGTH)
-data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
+data_util.save_variable([t2s_train_pad, Y_train], 'training_data_binary.pickle')
 t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=MAX_SENTENCE_LENGTH)
-data_util.save_variable([t2s_test_pad, Y_test], 'testing_data.pickle')
+data_util.save_variable([t2s_test_pad, Y_test], 'testing_data_binary.pickle')
 
 # config
 config = dict()
 config['batch_size'] = 32
 config['epochs'] = 50
 config['n_hidden'] = 64
-config['n_class'] = Y_train.shape[1]
-config['input_dim'] = min(2000, len(tokenizer.word_counts))+2
+config['n_class'] = 2
+config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
 config['output_dim'] = 128
 # model
 model = Sequential()
@@ -82,9 +85,9 @@ history = model.fit(t2s_train_pad, Y_train,
                         ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                     ])
 # History
-data_util.save_variable(history.history, 'history.pickle')
+data_util.save_variable(history.history, 'history_binary.pickle')
 # result
 y_pred_p = model.predict(t2s_test_pad)
 result = np.concatenate((y_pred_p, Y_test), axis=1)
-data_util.save_variable(result, 'predict_y.pickle')
+data_util.save_variable(result, 'predict_y_binary.pickle')
 print('done')
