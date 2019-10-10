@@ -1,2 +1,2 @@
-/data/linc9/conda/envs/nlpai/bin/python3 ../my_lstm.py \
+/data/linc9/conda/envs/nlpai/bin/python3 ../carotid_lstm.py \
 --round=1

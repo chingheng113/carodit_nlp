@@ -27,9 +27,9 @@ def setup_parser():
 def main():
     parser = setup_parser()
     args = parser.parse_args()
-    round = args.round
+    round_nm = args.round
     # read data
-    training_data = data_util.read_variable(os.path.join('round_'+round, 'training_bert.pickle'))
+    training_data = data_util.read_variable(os.path.join('round_'+round_nm, 'training_bert.pickle'))
     x_train = training_data['processed_content']
     Y_train = training_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
                             'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
@@ -60,7 +60,7 @@ def main():
     config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
     config['output_dim'] = 128
     # model
-    model = Sequential()
+    model = Sequential(name='lstm_'+round_nm)
     model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
     model.add(LSTM(config['n_hidden'], dropout=0.2, recurrent_dropout=0.2, return_sequences=True))
     model.add(LSTM(int(config['n_hidden']/2), dropout=0.2, recurrent_dropout=0.2))
@@ -77,11 +77,11 @@ def main():
                             ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                         ])
     # History
-    data_util.save_variable(history.history, 'history_'+round+'.pickle')
+    data_util.save_variable(history.history, 'history_'+round_nm+'.pickle')
     # result
     y_pred_p = model.predict(t2s_test_pad)
     result = np.concatenate((y_pred_p, Y_test), axis=1)
-    data_util.save_variable(result, 'predict_y_'+round+'.pickle')
+    data_util.save_variable(result, 'predict_y_'+round_nm+'.pickle')
     print('done')
 
 
