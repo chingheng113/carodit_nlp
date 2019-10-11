@@ -54,7 +54,7 @@ def main():
                         'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
 
     # tokenize
-    tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
+    tokenizer = Tokenizer(num_words=None)
     tokenizer.fit_on_texts(x_train)
     t2s_train = tokenizer.texts_to_sequences(x_train)
     t2s_test = tokenizer.texts_to_sequences(x_test)
