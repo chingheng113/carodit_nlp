@@ -52,9 +52,9 @@ t2s_test = tokenizer.texts_to_sequences(x_test)
 # padding
 MAX_SENTENCE_LENGTH = max(len(max(t2s_train, key=len)), len(max(t2s_test, key=len)))
 t2s_train_pad = sequence.pad_sequences(t2s_train, maxlen=MAX_SENTENCE_LENGTH)
-data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
+# data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
 t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=MAX_SENTENCE_LENGTH)
-data_util.save_variable([t2s_test_pad, Y_test], 'testing_data.pickle')
+# data_util.save_variable([t2s_test_pad, Y_test], 'testing_data.pickle')
 
 # config
 config = dict()
