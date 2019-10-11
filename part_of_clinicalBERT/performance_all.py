@@ -18,19 +18,17 @@ for lab_inx in range(17):
         read_path = os.path.join('..', 'carotid_data', 'predict_y_'+str(inx)+'.pickle')
         with open(read_path, 'rb') as f:
             data = pickle.load(f)
-            all_logits = data['all_logits']
-            all_labels = data['all_labels']
             mean_fpr = np.linspace(0, 1, 100)
             # Compute ROC curve and area the curve
-            fpr, tpr, thresholds = roc_curve(all_labels[:, lab_inx], all_logits[:, lab_inx])
+            fpr, tpr, thresholds = roc_curve(data[:, lab_inx+17], data[:, lab_inx])
             tprs.append(interp(mean_fpr, fpr, tpr))
             tprs[-1][0] = 0.0
             roc_auc = auc(fpr, tpr)
             aucs.append(roc_auc)
             # plt.plot(fpr, tpr, lw=1, alpha=0.3,
             #          label='ROC fold %d (AUC = %0.2f)' % (i, roc_auc))
-            y = np.where(all_logits[:, lab_inx] < 0, 0, 1)
-            f1s.append(f1_score(all_labels[:, lab_inx], y, average='micro'))
+            y = np.where(data[:, lab_inx] < 0, 0, 1)
+            f1s.append(f1_score(data[:, lab_inx+17], y, average='micro'))
             i += 1
     # plt.plot([0, 1], [0, 1], linestyle='--', lw=2, color='r',
     #          label='Chance', alpha=.8)

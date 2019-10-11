@@ -34,7 +34,7 @@ def main():
     Y_train = training_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
                             'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
 
-    test_data = data_util.read_variable(os.path.join('round_0', 'test_bert.pickle'))
+    test_data = data_util.read_variable(os.path.join('round_'+round_nm, 'test_bert.pickle'))
     x_test = test_data['processed_content']
     Y_test = test_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
                         'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
@@ -54,7 +54,7 @@ def main():
     # config
     config = dict()
     config['batch_size'] = 32
-    config['epochs'] = 50
+    config['epochs'] = 10
     config['n_hidden'] = 64
     config['n_class'] = Y_train.shape[1]
     config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
