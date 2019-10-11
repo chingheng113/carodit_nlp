@@ -58,7 +58,7 @@ def main():
     config['n_hidden'] = 64
     config['n_class'] = Y_train.shape[1]
     config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
-    config['output_dim'] = 128
+    config['output_dim'] = 400
     # model
     model = Sequential(name='lstm_'+round_nm)
     model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
