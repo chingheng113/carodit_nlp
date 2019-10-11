@@ -59,7 +59,7 @@ t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=MAX_SENTENCE_LENGTH)
 # config
 config = dict()
 config['batch_size'] = 32
-config['epochs'] = 50
+config['epochs'] = 10
 config['n_hidden'] = 64
 config['n_class'] = Y_train.shape[1]
 config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
