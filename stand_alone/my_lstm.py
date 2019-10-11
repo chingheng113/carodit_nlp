@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
 from carotid_data import data_util
 
 # read data
-data = pd.read_csv('carotid_101518_modified.csv')
+data = pd.read_csv('carotid_101313_all.csv')
 # data = data.loc[0:20, :]
 data.dropna(subset=['CONTENT'], axis=0, inplace=True)
 # Preprocessing
@@ -43,7 +43,7 @@ for index, row in data.iterrows():
 text_arr = np.array(text_arr)
 label_arr = np.array(label_arr)
 # Train, Test split
-x_train, x_test, Y_train, Y_test = train_test_split(text_arr, label_arr, test_size=0.2, random_state=42)
+x_train, x_test, Y_train, Y_test = train_test_split(text_arr, label_arr, test_size=0.2, random_state=0)
 # tokenize
 tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
 tokenizer.fit_on_texts(x_train)
