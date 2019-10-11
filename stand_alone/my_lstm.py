@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
 from carotid_data import data_util
 
 # read data
-data = pd.read_csv('carotid_101313_all.csv')
+data = pd.read_csv('carotid_downstream.csv')
 # data = data.loc[0:20, :]
 data.dropna(subset=['CONTENT'], axis=0, inplace=True)
 # Preprocessing
