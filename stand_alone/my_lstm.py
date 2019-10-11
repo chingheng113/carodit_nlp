@@ -3,7 +3,6 @@ import numpy as np
 import os
 import sys
 import re
-from carotid_data import data_util
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
@@ -14,6 +13,7 @@ from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 current_path = os.path.dirname(__file__)
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
+from carotid_data import data_util
 
 # read data
 data = pd.read_csv('carotid_101518_modified.csv')

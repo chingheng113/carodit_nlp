@@ -31,14 +31,14 @@ def plot_training_loss():
         plt.show()
 
 
-read_path = os.path.join('..', 'carotid_data', 'predict_y_0.pickle')
+read_path = os.path.join('..', 'carotid_data', 'predict_y_9.pickle')
 with open(read_path, 'rb') as file:
     result =pickle.load(file)
     predict_y_p = result[:,0:17]
     true_y = result[:,17:].astype(int)
     # true_y = (true_y == 1)
-    plot_training_acc()
-    plot_training_loss()
+    # plot_training_acc()
+    # plot_training_loss()
     for i in range(0, 17):
         p_label = predict_y_p[:, i]
         p_label_b = (p_label > 0.5).astype(int)
