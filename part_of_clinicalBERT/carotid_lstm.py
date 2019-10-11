@@ -24,6 +24,18 @@ def setup_parser():
                         help="Which data round will be using")
     return parser
 
+
+def make_one_line(data):
+    text_arr = []
+    for row in data:
+        sentences = row.split('\n')
+        processed_sentence = ''
+        for sentence in sentences:
+            processed_sentence += sentence + ' '
+        text_arr.append(processed_sentence)
+    return np.array(text_arr)
+
+
 def main():
     parser = setup_parser()
     args = parser.parse_args()
@@ -31,11 +43,13 @@ def main():
     # read data
     training_data = data_util.read_variable(os.path.join('round_'+round_nm, 'training_bert.pickle'))
     x_train = training_data['processed_content']
+    x_train = make_one_line(x_train)
     Y_train = training_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
                             'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
 
     test_data = data_util.read_variable(os.path.join('round_'+round_nm, 'test_bert.pickle'))
     x_test = test_data['processed_content']
+    x_test = make_one_line(x_test)
     Y_test = test_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
                         'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
 
@@ -58,7 +72,7 @@ def main():
     config['n_hidden'] = 64
     config['n_class'] = Y_train.shape[1]
     config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
-    config['output_dim'] = 400
+    config['output_dim'] = 128
     # model
     model = Sequential(name='lstm_'+round_nm)
     model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
