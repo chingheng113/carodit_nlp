@@ -12,7 +12,9 @@ from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
+from pathlib import Path
 current_path = os.path.dirname(__file__)
+root_path = Path(current_path).parent
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
 from carotid_data import data_util
 
@@ -32,7 +34,7 @@ def main():
     args = parser.parse_args()
     round_nm = args.round
     # read data
-    data = pd.read_csv(os.path.join('..', 'carotid_data', 'carotid_downstream.csv'))
+    data = pd.read_csv(os.path.join(root_path, 'carotid_data', 'carotid_downstream.csv'))
     # data = data.loc[0:10, :]
     data.dropna(subset=['CONTENT'], axis=0, inplace=True)
     # Preprocessing
