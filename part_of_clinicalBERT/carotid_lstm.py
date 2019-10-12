@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import sys
+import re
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
@@ -28,11 +29,8 @@ def setup_parser():
 def make_one_line(data):
     text_arr = []
     for row in data:
-        sentences = row.split('\n')
-        processed_sentence = ''
-        for sentence in sentences:
-            processed_sentence += sentence + ' '
-        text_arr.append(processed_sentence)
+        row = re.sub(r'[\n]', ' ', row)
+        text_arr.append(row)
     return np.array(text_arr)
 
 
@@ -71,7 +69,7 @@ def main():
     config['epochs'] = 50
     config['n_hidden'] = 64
     config['n_class'] = Y_train.shape[1]
-    config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
+    config['input_dim'] = len(tokenizer.word_counts)+2
     config['output_dim'] = 128
     # model
     model = Sequential(name='lstm_'+round_nm)
