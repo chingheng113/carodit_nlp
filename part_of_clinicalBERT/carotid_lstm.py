@@ -87,7 +87,7 @@ def main():
                         validation_split=0.2,
                         callbacks=[
                             ReduceLROnPlateau(factor=0.5, patience=int(config['epochs']/10), verbose=1),
-                            EarlyStopping(verbose=1, patience=int(config['epochs']/2)),
+                            EarlyStopping(verbose=1, patience=int(config['epochs']/10)),
                             ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                         ])
     # History
