@@ -62,7 +62,7 @@ config['batch_size'] = 32
 config['epochs'] = 10
 config['n_hidden'] = 64
 config['n_class'] = Y_train.shape[1]
-config['input_dim'] = max(2000, len(tokenizer.word_counts))+2
+config['input_dim'] = len(tokenizer.word_counts)+2
 config['output_dim'] = 128
 # model
 model = Sequential()
@@ -78,7 +78,7 @@ history = model.fit(t2s_train_pad, Y_train,
                     validation_split=0.2,
                     callbacks=[
                         ReduceLROnPlateau(factor=0.5, patience=int(config['epochs']/10), verbose=1),
-                        EarlyStopping(verbose=1, patience=int(config['epochs']/2)),
+                        EarlyStopping(verbose=1, patience=int(config['epochs']/10)),
                         ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
                     ])
 # History
