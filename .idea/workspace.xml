@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/carodit_nlp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carotid_data/carotid_downstream.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="100" column="57" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -322,7 +317,7 @@
       <workItem from="1570677027816" duration="1530000" />
       <workItem from="1570762759866" duration="9203000" />
       <workItem from="1570884239997" duration="61000" />
-      <workItem from="1570884321163" duration="7399000" />
+      <workItem from="1570884321163" duration="7924000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -415,11 +410,32 @@
       <option name="project" value="LOCAL" />
       <updated>1570916465966</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="bk">
+      <created>1570916537120</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570916537120</updated>
+    </task>
+    <task id="LOCAL-00015" summary="bk">
+      <created>1570916714475</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570916714475</updated>
+    </task>
+    <task id="LOCAL-00016" summary="bk">
+      <created>1570917116394</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570917116394</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22180000" />
+    <option name="totallyTimeSpent" value="22705000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,14 +448,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23443224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23443224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37346938" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37346938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34387755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -665,8 +680,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="375">
+          <caret line="100" column="57" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
