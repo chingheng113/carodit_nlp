@@ -13,7 +13,7 @@ from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 from pathlib import Path
-current_path = os.getcwd()
+current_path = os.path.dirname(__file__)
 root_path = Path(current_path).parent
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
 from carotid_data import data_util
@@ -98,14 +98,14 @@ def main():
                         callbacks=[
                             ReduceLROnPlateau(factor=0.5, patience=int(config['epochs']/10), verbose=1),
                             EarlyStopping(verbose=1, patience=int(config['epochs']/10)),
-                            ModelCheckpoint(os.path.join('results', model.name + '.h5'), save_best_only=True, verbose=1)
+                            ModelCheckpoint(os.path.join('./results', model.name + '.h5'), save_best_only=True, verbose=1)
                         ])
     # History
-    data_util.save_variable(history.history, os.path.join('results', 'history.pickle'))
+    data_util.save_variable(history.history, os.path.join('./results', 'history.pickle'))
     # result
     y_pred_p = model.predict(t2s_test_pad)
     result = np.concatenate((y_pred_p, Y_test), axis=1)
-    data_util.save_variable(result, os.path.join('results', 'predict_y.pickle'))
+    data_util.save_variable(result, os.path.join('./results', 'predict_y.pickle'))
     print('done')
 
 
