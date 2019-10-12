@@ -1,7 +1,9 @@
+import pandas as pd
 import numpy as np
 import os
 import sys
 import re
+import argparse
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
@@ -10,11 +12,10 @@ from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
-import argparse
 current_path = os.path.dirname(__file__)
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
-sys.path.append('../')
 from carotid_data import data_util
+
 
 def setup_parser():
     parser = argparse.ArgumentParser()
@@ -26,33 +27,41 @@ def setup_parser():
     return parser
 
 
-def make_one_line(data):
-    text_arr = []
-    for row in data:
-        row = re.sub(r'[\n]', ' ', row)
-        text_arr.append(row)
-    return np.array(text_arr)
-
-
 def main():
     parser = setup_parser()
     args = parser.parse_args()
     round_nm = args.round
     # read data
-    training_data = data_util.read_variable(os.path.join('round_'+round_nm, 'training_bert.pickle'))
-    x_train = training_data['processed_content']
-    x_train = make_one_line(x_train)
-    Y_train = training_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
-                            'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
-
-    test_data = data_util.read_variable(os.path.join('round_'+round_nm, 'test_bert.pickle'))
-    x_test = test_data['processed_content']
-    x_test = make_one_line(x_test)
-    Y_test = test_data[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA', 'LCCA', 'LEICA', 'LIICA',
-                        'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
-
+    data = pd.read_csv(os.path.join('..', 'carotid_data', 'carotid_downstream.csv'))
+    # data = data.loc[0:10, :]
+    data.dropna(subset=['CONTENT'], axis=0, inplace=True)
+    # Preprocessing
+    text_arr = []
+    label_arr = []
+    for index, row in data.iterrows():
+        label = row[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA',
+                     'LCCA', 'LEICA', 'LIICA', 'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
+        corpus = row['CONTENT']
+        if '<BASE64>' not in corpus:
+            sentences = corpus.split('\n')
+            processed_sentence = ''
+            for sentence in sentences:
+                if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
+                    # no chinese sentence
+                    if re.search('(>\s*\d+|<\s*\d+)', sentence):
+                        sentence = sentence.replace('>', ' greater ')
+                        sentence = sentence.replace('<', ' less ')
+                    sentence = sentence.replace('%', ' percent')
+                    processed_sentence += sentence+' '
+            processed_sentence = re.sub(' +', ' ', processed_sentence)
+            text_arr.append(processed_sentence)
+            label_arr.append(label)
+    text_arr = np.array(text_arr)
+    label_arr = np.array(label_arr)
+    # Train, Test split
+    x_train, x_test, Y_train, Y_test = train_test_split(text_arr, label_arr, test_size=0.2, random_state=int(round_nm))
     # tokenize
-    tokenizer = Tokenizer(num_words=None)
+    tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
     tokenizer.fit_on_texts(x_train)
     t2s_train = tokenizer.texts_to_sequences(x_train)
     t2s_test = tokenizer.texts_to_sequences(x_test)
@@ -86,14 +95,14 @@ def main():
                         callbacks=[
                             ReduceLROnPlateau(factor=0.5, patience=int(config['epochs']/10), verbose=1),
                             EarlyStopping(verbose=1, patience=int(config['epochs']/10)),
-                            ModelCheckpoint(os.path.join(current_path, model.name + '.h5'), save_best_only=True, verbose=1)
+                            ModelCheckpoint(os.path.join(current_path, 'results', model.name + '.h5'), save_best_only=True, verbose=1)
                         ])
     # History
-    data_util.save_variable(history.history, 'history_'+round_nm+'.pickle')
+    data_util.save_variable(history.history, os.path.join('results', 'history.pickle'))
     # result
     y_pred_p = model.predict(t2s_test_pad)
     result = np.concatenate((y_pred_p, Y_test), axis=1)
-    data_util.save_variable(result, 'predict_y_'+round_nm+'.pickle')
+    data_util.save_variable(result, os.path.join('results', 'predict_y.pickle'))
     print('done')
 
 

@@ -29,7 +29,7 @@ def plot_training_loss():
         plt.show()
 
 
-read_path = os.path.join('..', 'carotid_data', 'predict_y_.pickle')
+read_path = os.path.join('..', 'carotid_data', 'predict_y.pickle')
 with open(read_path, 'rb') as file:
     result =pickle.load(file)
     predict_y_p = result[:,0:17]

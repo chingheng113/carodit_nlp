@@ -10,7 +10,6 @@ def read_variable(val_name):
         return val
 
 
-def save_variable(val, val_name):
-    save_path = os.path.join(current_path, val_name)
+def save_variable(val, save_path):
     with open(save_path, 'wb') as file_pi:
         pickle.dump(val, file_pi)
