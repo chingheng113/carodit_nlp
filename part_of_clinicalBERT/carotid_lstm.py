@@ -13,7 +13,7 @@ from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 from pathlib import Path
-current_path = os.path.dirname(__file__)
+current_path = os.getcwd()
 root_path = Path(current_path).parent
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/carodit_nlp/')))
 from carotid_data import data_util
