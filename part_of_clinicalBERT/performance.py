@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_training_acc():
-    with open(os.path.join('..', 'carotid_data', 'history_0.pickle'), 'rb') as f:
+    with open(os.path.join('results', 'history_0.pickle'), 'rb') as f:
         history = pickle.load(f)
         plt.plot(history['acc'])
         plt.plot(history['val_acc'])
@@ -18,7 +18,7 @@ def plot_training_acc():
 
 
 def plot_training_loss():
-    with open(os.path.join('..', 'carotid_data', 'history_0.pickle'), 'rb') as f:
+    with open(os.path.join('results', 'history_0.pickle'), 'rb') as f:
         history = pickle.load(f)
         plt.plot(history['loss'])
         plt.plot(history['val_loss'])
@@ -29,7 +29,7 @@ def plot_training_loss():
         plt.show()
 
 
-read_path = os.path.join('..', 'carotid_data', 'predict_y.pickle')
+read_path = os.path.join('results', 'predict_y_0.pickle')
 with open(read_path, 'rb') as file:
     result =pickle.load(file)
     predict_y_p = result[:,0:17]
