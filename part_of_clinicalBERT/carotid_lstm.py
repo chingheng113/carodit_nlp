@@ -101,11 +101,11 @@ def main():
                             ModelCheckpoint(os.path.join(current_path, 'results', model.name + '.h5'), save_best_only=True, verbose=1)
                         ])
     # History
-    data_util.save_variable(history.history, os.path.join(current_path, 'results', 'history.pickle'))
+    data_util.save_variable(history.history, os.path.join(current_path, 'results', 'history_'+round_nm+'.pickle'))
     # result
     y_pred_p = model.predict(t2s_test_pad)
     result = np.concatenate((y_pred_p, Y_test), axis=1)
-    data_util.save_variable(result, os.path.join(current_path, 'results', 'predict_y.pickle'))
+    data_util.save_variable(result, os.path.join(current_path, 'results', 'predict_y_'+round_nm+'.pickle'))
     print('done')
 
 
