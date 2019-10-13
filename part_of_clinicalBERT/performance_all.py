@@ -44,10 +44,9 @@ for lab_inx in range(17):
     std_f1 = np.std(f1s)
     print(model_name)
     print(labels[lab_inx])
-    print(mean_auc)
-    print(std_auc)
-    print(mean_f1)
-    print(std_f1)
+    print(str(round(mean_auc, 3))+'_'+str(round(std_auc, 3)))
+    print(str(round(mean_f1, 3))+'_'+str(round(std_f1, 3)))
+
     # plt.plot(mean_fpr, mean_tpr, color='b',
     #          label=r'Mean ROC (AUC = %0.2f $\pm$ %0.2f)' % (mean_auc, std_auc),
     #          lw=2, alpha=.8)
