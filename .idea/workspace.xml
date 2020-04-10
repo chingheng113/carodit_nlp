@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
+    <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="bk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/carotid_data/create_train_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/lstm/carotid_lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/performance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/performance_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/performance_all.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/results/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/results/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_0.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_0.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_1.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_1.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_2.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_2.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_3.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_3.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_4.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_4.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_5.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_5.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_6.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_6.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_7.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_7.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_8.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_8.swarm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_9.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scripts/lstm/round_9.swarm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="314" column="66" lean-forward="true" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
+            <state relative-caret-position="287">
+              <caret line="289" column="82" lean-forward="true" selection-start-line="289" selection-start-column="82" selection-end-line="289" selection-end-column="82" />
               <folding>
                 <element signature="e#1#10#0" expanded="true" />
                 <element signature="e#701#2562#0" />
@@ -337,7 +322,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="9257000" />
+      <workItem from="1586457073729" duration="10193000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -493,11 +478,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571004681026</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="bk">
+      <created>1586548758839</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1586548758839</updated>
+    </task>
+    <task id="LOCAL-00024" summary="bk">
+      <created>1586549408060</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586549408060</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41134000" />
+    <option name="totallyTimeSpent" value="42070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,7 +516,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37244898" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.29693878" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29693878" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32977462" />
@@ -525,7 +524,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32977462" />
       <window_info anchor="bottom" id="Messages" order="14" />
@@ -796,10 +795,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/carotid_nlp.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-753" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="314" column="66" lean-forward="true" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
+        <state relative-caret-position="287">
+          <caret line="289" column="82" lean-forward="true" selection-start-line="289" selection-start-column="82" selection-end-line="289" selection-end-column="82" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
             <element signature="e#701#2562#0" />
