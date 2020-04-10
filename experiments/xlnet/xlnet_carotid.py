@@ -284,8 +284,8 @@ def main():
     ex_in = 'internal'
     round_n = '0'
 
-    train, test, label_cols = create_training_testing_data(os.path.join( '..', 'data', ex_in), round_n)
-    train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train, label_cols)
+    train_data, test_data, label_cols = create_training_testing_data(os.path.join( '..', 'data', ex_in), round_n)
+    train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
 
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
 
