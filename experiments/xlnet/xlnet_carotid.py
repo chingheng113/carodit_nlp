@@ -243,7 +243,7 @@ def tokenize_inputs(text_list, tokenizer, num_embeddings=512):
     return input_ids
 
 
-def create_training_testing_data(file_path, n):
+def create_training_testing_data_internal(file_path, n):
     train_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'training_'+n+'.csv'))
     test_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'testing_'+n+'.csv'))
     label_cols = list(train_data.columns)[2:-1]
@@ -264,6 +264,19 @@ def create_training_testing_data(file_path, n):
     test_data["masks"] = test_attention_masks
 
     return train_data, test_data, label_cols
+
+
+def create_training_testing_data_external(file_path):
+    test_data = pd.read_csv(os.path.join(file_path, 'testing.csv'))
+    label_cols = list(test_data.columns)[2:-1]
+    tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
+    test_text_list = test_data["processed_content"].values
+    test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=250)
+    test_attention_masks = create_attn_masks(test_input_ids)
+    # add input ids and attention masks to the dataframe
+    test_data["features"] = test_input_ids.tolist()
+    test_data["masks"] = test_attention_masks
+    return test_data, label_cols
 
 
 def get_train_validation_dataloader(batch_size, train, label_cols):
@@ -304,11 +317,11 @@ def get_train_validation_dataloader(batch_size, train, label_cols):
     return train_dataloader, validation_dataloader
 
 
-def model_testing(trained_model, test_data, label_cols, round_n):
+def model_testing(trained_model, test_data, label_cols, exin, round_n):
     pred_probs = generate_predictions(trained_model, test_data, len(label_cols), device="cuda", batch_size=32)
     for index, elem in enumerate(label_cols):
         test_data[elem+'_pred'] = pred_probs[:, index]
-    with open(os.path.join('results', 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
+    with open(os.path.join('results', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
         pickle.dump(test_data, file_pi)
 
 
@@ -355,13 +368,14 @@ if __name__ == '__main__':
     ex_in = 'external'
     round_num = '0'
 
-    train_dataset, test_dataset, label_names = create_training_testing_data(os.path.join('..', 'data', ex_in), round_num)
-    train_dataset = train_dataset.head(10)
     if ex_in == 'internal':
+        train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num)
+        train_dataset = train_dataset.head(10)
         model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
-        model_testing(model, test_dataset, label_names, round_num)
+        model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
+        test_dataset, label_names = create_training_testing_data_external(os.path.join('..', 'data', 'external'))
         model, start_epoch, lowest_eval_loss, train_loss_hist, valid_loss_hist = load_model(os.path.join('models', 'round_'+round_num))
-        model_testing(model, test_dataset, label_names, round_num)
+        model_testing(model, test_dataset, label_names, ex_in, round_num)
     else:
         print('internal or external ?')

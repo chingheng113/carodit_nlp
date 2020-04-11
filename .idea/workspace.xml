@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments/data/internal/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/results/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/data/external/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carotid_data/create_train_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/carotid_data/create_train_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,16 +29,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="309" column="8" lean-forward="true" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
+            <state relative-caret-position="403">
+              <caret line="373" column="54" selection-start-line="373" selection-start-column="54" selection-end-line="373" selection-end-column="54" />
               <folding>
                 <element signature="e#165#174#0" expanded="true" />
+                <element signature="e#701#2562#0" />
+                <element signature="e#2772#5948#0" />
+                <element signature="e#6021#6733#0" />
                 <element signature="e#729#1369#0" />
-                <element signature="e#1403#1981#0" />
                 <element signature="e#7247#7677#0" />
                 <element signature="e#7747#8606#0" />
-                <element signature="e#8663#9548#0" />
                 <element signature="e#7267#8498#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carotid_data/create_train_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,6 +141,13 @@
               <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
               <item name="lstm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -137,6 +155,13 @@
               <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
               <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,7 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.xlnet_carotid">
+  <component name="RunManager" selected="Python.create_train_test">
     <configuration name="carotid_lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="carodit_nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -299,8 +324,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.xlnet_carotid" />
         <item itemvalue="Python.create_train_test" />
+        <item itemvalue="Python.xlnet_carotid" />
         <item itemvalue="Python.carotid_lstm" />
         <item itemvalue="Python.performance_all" />
         <item itemvalue="Python.performance" />
@@ -330,7 +355,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="13953000" />
+      <workItem from="1586457073729" duration="16132000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -514,11 +539,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586553613438</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="bk">
+      <created>1586636676509</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586636676509</updated>
+    </task>
+    <task id="LOCAL-00028" summary="bk">
+      <created>1586638005252</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1586638005252</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45830000" />
+    <option name="totallyTimeSpent" value="48009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,7 +570,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26923078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -601,8 +639,8 @@
     <SUITE FILE_PATH="coverage/carodit_nlp$my_lstm.coverage" NAME="my_lstm Coverage Results" MODIFIED="1570902435050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stand_alone" />
     <SUITE FILE_PATH="coverage/carodit_nlp$see.coverage" NAME="see Coverage Results" MODIFIED="1570916500286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
     <SUITE FILE_PATH="coverage/carodit_nlp$carotid_lstm.coverage" NAME="carotid_lstm Coverage Results" MODIFIED="1571544181675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$create_train_test.coverage" NAME="create_train_test Coverage Results" MODIFIED="1586463928476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carotid_data" />
     <SUITE FILE_PATH="coverage/carodit_nlp$xlnet_carotid.coverage" NAME="xlnet_carotid Coverage Results" MODIFIED="1586548046211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/xlnet" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$create_train_test.coverage" NAME="create_train_test Coverage Results" MODIFIED="1586639521061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carotid_data" />
     <SUITE FILE_PATH="coverage/carodit_nlp$best_model_test.coverage" NAME="best_model_test Coverage Results" MODIFIED="1570847939920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
     <SUITE FILE_PATH="coverage/carodit_nlp$performance_all.coverage" NAME="performance_all Coverage Results" MODIFIED="1571191159235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
   </component>
@@ -803,16 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_data/create_train_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="67" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/carotid_nlp.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-753" />
@@ -824,17 +852,28 @@
     <entry file="file://$PROJECT_DIR$/experiments/data/external/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/carotid_data/create_train_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="309" column="8" lean-forward="true" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
+        <state relative-caret-position="403">
+          <caret line="373" column="54" selection-start-line="373" selection-start-column="54" selection-end-line="373" selection-end-column="54" />
           <folding>
             <element signature="e#165#174#0" expanded="true" />
+            <element signature="e#701#2562#0" />
+            <element signature="e#2772#5948#0" />
+            <element signature="e#6021#6733#0" />
             <element signature="e#729#1369#0" />
-            <element signature="e#1403#1981#0" />
             <element signature="e#7247#7677#0" />
             <element signature="e#7747#8606#0" />
-            <element signature="e#8663#9548#0" />
             <element signature="e#7267#8498#0" />
           </folding>
         </state>
