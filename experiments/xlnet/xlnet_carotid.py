@@ -321,9 +321,12 @@ def model_testing(trained_model, test_data, label_cols, exin, round_n):
     pred_probs = generate_predictions(trained_model, test_data, len(label_cols), device="cuda", batch_size=32)
     for index, elem in enumerate(label_cols):
         test_data[elem+'_pred'] = pred_probs[:, index]
-    with open(os.path.join('results', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
-        pickle.dump(test_data, file_pi)
-
+    if exin == 'internal':
+        with open(os.path.join('results', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
+            pickle.dump(test_data, file_pi)
+    else:
+        with open(os.path.join('results', exin, 'predict_result.pickle'), 'wb') as file_pi:
+            pickle.dump(test_data, file_pi)
 
 def model_training(train_data, label_cols, round_n):
     train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
