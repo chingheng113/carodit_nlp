@@ -14,6 +14,7 @@ import pandas as pd
 from tqdm import tqdm, trange
 import pickle
 import time
+import argparse
 
 
 class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
@@ -365,11 +366,45 @@ def model_training(train_data, label_cols, round_n):
     return model, train_loss_set, valid_loss_set
 
 
+def setup_parser():
+    parser = argparse.ArgumentParser()
+
+    ## Required parameters
+    parser.add_argument("--batch_size",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="batch_size")
+    parser.add_argument("--num_epochs",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="number of epochs")
+    parser.add_argument("--ex_in",
+                        default=None,
+                        type=str,
+                        required=True,
+                        help="internal or external ?")
+
+    parser.add_argument("--round",
+                        default=None,
+                        type=str,
+                        required=True,
+                        help="which round")
+    return parser
+
+
 if __name__ == '__main__':
-    batch_size = 32
-    num_epochs = 3
-    ex_in = 'external'
-    round_num = '0'
+    # batch_size = 32
+    # num_epochs = 3
+    # ex_in = 'external'
+    # round_num = '0'
+    parser = setup_parser()
+    args = parser.parse_args()
+    batch_size = args.batch_size
+    num_epochs = args.num_epochs
+    ex_in = args.ex_in
+    round_num = args.round_num
 
     if ex_in == 'internal':
         train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num)
