@@ -313,7 +313,6 @@ def model_testing(trained_model, test_data, label_cols, round_n):
 
 
 def model_training(train_data, label_cols, round_n):
-    train_data = train_data.head(10)
     train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
 
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
@@ -353,11 +352,16 @@ def model_training(train_data, label_cols, round_n):
 if __name__ == '__main__':
     batch_size = 32
     num_epochs = 3
-    ex_in = 'internal'
+    ex_in = 'external'
     round_num = '0'
 
     train_dataset, test_dataset, label_names = create_training_testing_data(os.path.join('..', 'data', ex_in), round_num)
-
-    model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
-
-    model_testing(model, test_dataset, label_names, round_num)
+    train_dataset = train_dataset.head(10)
+    if ex_in == 'internal':
+        model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
+        model_testing(model, test_dataset, label_names, round_num)
+    elif ex_in == 'external':
+        model, start_epoch, lowest_eval_loss, train_loss_hist, valid_loss_hist = load_model(os.path.join('models', 'round_'+round_num))
+        model_testing(model, test_dataset, label_names, round_num)
+    else:
+        print('internal or external ?')
