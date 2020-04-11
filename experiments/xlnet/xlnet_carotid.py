@@ -12,6 +12,8 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 from tqdm import tqdm, trange
+import pickle
+import time
 
 
 class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
@@ -24,11 +26,11 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
 
         torch.nn.init.xavier_normal_(self.classifier.weight)
 
-    def forward(self, input_ids, token_type_ids=None, \
+    def forward(self, input_ids, token_type_ids=None,
                 attention_mask=None, labels=None):
         # last hidden layer
-        last_hidden_state = self.xlnet(input_ids=input_ids, \
-                                       attention_mask=attention_mask, \
+        last_hidden_state = self.xlnet(input_ids=input_ids,
+                                       attention_mask=attention_mask,
                                        token_type_ids=token_type_ids)
         # pool the outputs into a mean vector
         mean_last_hidden_state = self.pool_hidden_state(last_hidden_state)
@@ -36,7 +38,7 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
 
         if labels is not None:
             loss_fct = BCEWithLogitsLoss()
-            loss = loss_fct(logits.view(-1, self.num_labels), \
+            loss = loss_fct(logits.view(-1, self.num_labels),
                             labels.view(-1, self.num_labels))
             return loss
         else:
@@ -151,6 +153,30 @@ def train(model, num_epochs, optimizer, train_dataloader, valid_dataloader,
                            lowest_eval_loss, train_loss_set, valid_loss_set)
         print("\n")
     return model, train_loss_set, valid_loss_set
+
+
+def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
+    num_iter = math.ceil(df.shape[0] / batch_size)
+
+    pred_probs = np.array([]).reshape(0, num_labels)
+
+    model.to(device)
+    model.eval()
+
+    for i in range(num_iter):
+        df_subset = df.iloc[i * batch_size:(i + 1) * batch_size, :]
+        X = df_subset["features"].values.tolist()
+        masks = df_subset["masks"].values.tolist()
+        X = torch.tensor(X)
+        masks = torch.tensor(masks, dtype=torch.long)
+        X = X.to(device)
+        masks = masks.to(device)
+        with torch.no_grad():
+            logits = model(input_ids=X, attention_mask=masks)
+            logits = logits.sigmoid().detach().cpu().numpy()
+            pred_probs = np.vstack([pred_probs, logits])
+
+    return pred_probs
 
 
 def save_model(model, save_path, epochs, lowest_eval_loss, train_loss_hist, valid_loss_hist):
@@ -278,19 +304,23 @@ def get_train_validation_dataloader(batch_size, train, label_cols):
     return train_dataloader, validation_dataloader
 
 
-def main():
-    batch_size = 32
-    num_epochs = 3
-    ex_in = 'internal'
-    round_n = '0'
+def model_testing(trained_model, test_data, label_cols, round_n):
+    pred_probs = generate_predictions(trained_model, test_data, len(label_cols), device="cuda", batch_size=32)
+    for index, elem in enumerate(label_cols):
+        test_data[elem+'_pred'] = pred_probs[:, index]
+    with open(os.path.join('results', 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
+        pickle.dump(test_data, file_pi)
 
-    train_data, test_data, label_cols = create_training_testing_data(os.path.join( '..', 'data', ex_in), round_n)
+
+def model_training(train_data, label_cols, round_n):
+    train_data = train_data.head(10)
     train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
 
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
 
     model = XLNetForMultiLabelSequenceClassification(num_labels=len(label_cols))
     optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False)
+    start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
                                                   optimizer=optimizer,
@@ -313,6 +343,21 @@ def main():
     #                                               lowest_eval_loss=lowest_eval_loss,
     #                                               start_epoch=start_epoch,
     #                                               device="cuda")
+    end = time.time()
+    elapse = end - start
+    with open(os.path.join('results', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
+        pickle.dump(elapse, file_pi)
+    return model, train_loss_set, valid_loss_set
+
 
 if __name__ == '__main__':
-    main()
+    batch_size = 32
+    num_epochs = 3
+    ex_in = 'internal'
+    round_num = '0'
+
+    train_dataset, test_dataset, label_names = create_training_testing_data(os.path.join('..', 'data', ex_in), round_num)
+
+    model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
+
+    model_testing(model, test_dataset, label_names, round_num)

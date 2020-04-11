@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="bk">
+    <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/experiments/data/internal/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/results/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/data/external/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,16 +31,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="289" column="82" lean-forward="true" selection-start-line="289" selection-start-column="82" selection-end-line="289" selection-end-column="82" />
+            <state relative-caret-position="235">
+              <caret line="309" column="8" lean-forward="true" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
               <folding>
-                <element signature="e#1#10#0" expanded="true" />
-                <element signature="e#701#2562#0" />
-                <element signature="e#2772#5948#0" />
+                <element signature="e#165#174#0" expanded="true" />
                 <element signature="e#729#1369#0" />
                 <element signature="e#1403#1981#0" />
                 <element signature="e#7247#7677#0" />
                 <element signature="e#7747#8606#0" />
+                <element signature="e#8663#9548#0" />
+                <element signature="e#7267#8498#0" />
               </folding>
             </state>
           </provider>
@@ -55,6 +58,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>round</find>
+      <find>train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,9 +93,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="850" />
-    <option name="width" value="830" />
-    <option name="height" value="1050" />
+    <option name="x" value="251" />
+    <option name="y" value="41" />
+    <option name="width" value="855" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -143,17 +148,20 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/stand_alone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments/data/internal" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/data/internal" />
+      <recent name="$PROJECT_DIR$/experiments/data/external" />
       <recent name="$PROJECT_DIR$/stand_alone" />
       <recent name="$PROJECT_DIR$/part_of_clinicalBERT" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/xlnet" />
       <recent name="$PROJECT_DIR$/experiments/lstm" />
       <recent name="$PROJECT_DIR$/experiments/scripts/lstm" />
       <recent name="$PROJECT_DIR$/carotid_data" />
@@ -322,7 +330,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="10193000" />
+      <workItem from="1586457073729" duration="13953000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -492,11 +500,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586549408060</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="bk">
+      <created>1586553254744</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586553254744</updated>
+    </task>
+    <task id="LOCAL-00026" summary="bk">
+      <created>1586553613438</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1586553613438</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42070000" />
+    <option name="totallyTimeSpent" value="45830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,13 +531,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13369964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26923078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37244898" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29795918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29693878" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -524,7 +547,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4119898" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32977462" />
       <window_info anchor="bottom" id="Messages" order="14" />
@@ -569,11 +592,6 @@
           <url>file://$PROJECT_DIR$/experiments/performance_all.py</url>
           <line>34</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py</url>
-          <line>293</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -681,7 +699,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stand_alone/my_lstm_binary.py" />
-    <entry file="file://$PROJECT_DIR$/experiments/results/.gitkeep">
+    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/part_of_clinicalBERT/see.py" />
@@ -800,18 +818,24 @@
         <state relative-caret-position="-753" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/data/internal/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/data/external/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="289" column="82" lean-forward="true" selection-start-line="289" selection-start-column="82" selection-end-line="289" selection-end-column="82" />
+        <state relative-caret-position="235">
+          <caret line="309" column="8" lean-forward="true" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
           <folding>
-            <element signature="e#1#10#0" expanded="true" />
-            <element signature="e#701#2562#0" />
-            <element signature="e#2772#5948#0" />
+            <element signature="e#165#174#0" expanded="true" />
             <element signature="e#729#1369#0" />
             <element signature="e#1403#1981#0" />
             <element signature="e#7247#7677#0" />
             <element signature="e#7747#8606#0" />
+            <element signature="e#8663#9548#0" />
+            <element signature="e#7267#8498#0" />
           </folding>
         </state>
       </provider>
