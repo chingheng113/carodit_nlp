@@ -386,7 +386,7 @@ def setup_parser():
                         required=True,
                         help="internal or external ?")
 
-    parser.add_argument("--round",
+    parser.add_argument("--round_num",
                         default=None,
                         type=str,
                         required=True,
