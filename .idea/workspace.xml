@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/palyground/performance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/performance_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/palyground/performance_all.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.79288024">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -116,14 +113,15 @@
         <option value="$PROJECT_DIR$/carotid_data/create_train_test.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" />
+        <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="251" />
-    <option name="y" value="41" />
-    <option name="width" value="855" />
-    <option name="height" value="876" />
+    <option name="x" value="239" />
+    <option name="y" value="140" />
+    <option name="width" value="1181" />
+    <option name="height" value="857" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -163,12 +161,6 @@
               <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
               <item name="xlnet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,9 +191,9 @@
       <recent name="$PROJECT_DIR$/part_of_clinicalBERT" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/lstm" />
       <recent name="$PROJECT_DIR$/palyground" />
       <recent name="$PROJECT_DIR$/experiments/xlnet" />
-      <recent name="$PROJECT_DIR$/experiments/lstm" />
       <recent name="$PROJECT_DIR$/experiments/scripts/lstm" />
       <recent name="$PROJECT_DIR$/carotid_data" />
     </key>
@@ -369,7 +361,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="18402000" />
+      <workItem from="1586457073729" duration="19300000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -595,11 +587,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586641447030</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="bk">
+      <created>1586659061538</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1586659061538</updated>
+    </task>
+    <task id="LOCAL-00034" summary="bk">
+      <created>1586659532881</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1586659532881</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50279000" />
+    <option name="totallyTimeSpent" value="51177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,9 +618,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3858364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24542125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -916,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/scripts/lstm/round_0.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -930,6 +928,13 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/lstm/round_0.swarm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
     </entry>

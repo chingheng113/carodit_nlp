@@ -1,4 +1,3 @@
-module load python/3.7
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=32 --num_epochs=5  --ex_in=internal --round_num=0
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=32 --num_epochs=5  --ex_in=internal --round_num=1
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=32 --num_epochs=5  --ex_in=internal --round_num=2
