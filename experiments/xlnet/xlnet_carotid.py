@@ -329,6 +329,7 @@ def model_testing(trained_model, test_data, label_cols, exin, round_n):
         with open(os.path.join('results', exin, 'predict_result.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
 
+
 def model_training(train_data, label_cols, round_n):
     train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
 
@@ -361,7 +362,7 @@ def model_training(train_data, label_cols, round_n):
     #                                               device="cuda")
     end = time.time()
     elapse = end - start
-    with open(os.path.join('results', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
+    with open(os.path.join('results', 'internal', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
         pickle.dump(elapse, file_pi)
     return model, train_loss_set, valid_loss_set
 

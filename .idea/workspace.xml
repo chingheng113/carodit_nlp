@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/xlnet/results/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/results/internal/round_0/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="446">
-                  <caret line="363" column="68" selection-start-line="363" selection-start-column="57" selection-end-line="363" selection-end-column="68" />
+                <state relative-caret-position="319">
+                  <caret line="370" column="38" lean-forward="true" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
                   <folding>
                     <element signature="e#165#174#0" expanded="true" />
                     <element signature="e#701#2562#0" />
@@ -34,6 +35,11 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/experiments/xlnet/results/external/.gitkeep">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -46,9 +52,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -111,17 +121,16 @@
         <option value="$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py" />
         <option value="$PROJECT_DIR$/carotid_data/create_train_tes.py" />
         <option value="$PROJECT_DIR$/carotid_data/create_train_test.py" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" />
+        <option value="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="239" />
-    <option name="y" value="140" />
-    <option name="width" value="1181" />
-    <option name="height" value="857" />
+    <option name="y" value="23" />
+    <option name="width" value="1215" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -166,6 +175,38 @@
             <path>
               <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="xlnet" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="round_0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
               <item name="palyground" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -178,24 +219,25 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments/data/internal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments/lstm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/xlnet/results/external" />
       <recent name="$PROJECT_DIR$/experiments/data/internal" />
       <recent name="$PROJECT_DIR$/experiments/data/external" />
       <recent name="$PROJECT_DIR$/stand_alone" />
       <recent name="$PROJECT_DIR$/part_of_clinicalBERT" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/xlnet/results/internal/round_0" />
       <recent name="$PROJECT_DIR$/experiments/lstm" />
       <recent name="$PROJECT_DIR$/palyground" />
       <recent name="$PROJECT_DIR$/experiments/xlnet" />
       <recent name="$PROJECT_DIR$/experiments/scripts/lstm" />
-      <recent name="$PROJECT_DIR$/carotid_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -361,7 +403,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="19300000" />
+      <workItem from="1586457073729" duration="19759000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -601,11 +643,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586659532881</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="bk">
+      <created>1586660334878</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1586660334878</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bk">
+      <created>1586660548132</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1586660548132</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51177000" />
+    <option name="totallyTimeSpent" value="51636000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,7 +842,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stand_alone/my_lstm_binary.py" />
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results/.gitkeep">
+    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results/internal/round_0/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/part_of_clinicalBERT/see.py" />
@@ -904,20 +960,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
+    <entry file="file://$PROJECT_DIR$/experiments/lstm/round_0.swarm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="363" column="68" selection-start-line="363" selection-start-column="57" selection-end-line="363" selection-end-column="68" />
-          <folding>
-            <element signature="e#165#174#0" expanded="true" />
-            <element signature="e#701#2562#0" />
-            <element signature="e#2772#5948#0" />
-            <element signature="e#6021#6733#0" />
-            <element signature="e#729#1369#0" />
-            <element signature="e#7247#7677#0" />
-            <element signature="e#7747#8606#0" />
-            <element signature="e#7267#8498#0" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -931,14 +984,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/round_0.swarm">
+    <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="319">
+          <caret line="370" column="38" lean-forward="true" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
+          <folding>
+            <element signature="e#165#174#0" expanded="true" />
+            <element signature="e#701#2562#0" />
+            <element signature="e#2772#5948#0" />
+            <element signature="e#6021#6733#0" />
+            <element signature="e#729#1369#0" />
+            <element signature="e#7247#7677#0" />
+            <element signature="e#7747#8606#0" />
+            <element signature="e#7267#8498#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm">
+    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results/external/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
