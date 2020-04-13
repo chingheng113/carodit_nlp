@@ -97,17 +97,16 @@ def model_training(train, label_cols, round_n):
     # History
     with open(os.path.join('results', 'internal', 'round_'+round_n, 'history_'+round_n+'.pickle'), 'wb') as file_pi:
         pickle.dump(history.history, file_pi)
-    return tokenizer, model
+    return tokenizer, MAX_SENTENCE_LENGTH, model
 
 
-def model_testing(testing, label_cols, model, tokenizer, round_n, ex_in):
+def model_testing(testing, label_cols, model, tokenizer, max_len, round_n, ex_in):
     x_test = testing['processed_content']
     y_test = testing[label_cols]
     # tokenize
     t2s_test = tokenizer.texts_to_sequences(x_test)
     # padding
-    MAX_SENTENCE_LENGTH = len(max(t2s_test, key=len))
-    t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=MAX_SENTENCE_LENGTH)
+    t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=max_len)
     # data_util.save_variable([t2s_test_pad, Y_test], 'testing_data.pickle')
     y_pred_p = model.predict(t2s_test_pad)
     for index, elem in enumerate(label_cols):
@@ -123,9 +122,9 @@ if __name__ == '__main__':
 
     in_train_data, in_test_data, in_label_cols = read_internal_data(round_nm)
     in_train_data = in_train_data.head(10)
-    trained_tokenizer, trained_model = model_training(in_train_data, in_label_cols, round_nm)
-    model_testing(in_test_data, in_label_cols, trained_model, trained_tokenizer, round_nm, 'internal')
+    trained_tokenizer, max_len, trained_model = model_training(in_train_data, in_label_cols, round_nm)
+    model_testing(in_test_data, in_label_cols, trained_model, trained_tokenizer, max_len, round_nm, 'internal')
 
     ex_test_data, ex_label_cols = read_external_data(round_nm)
-    model_testing(ex_test_data, ex_label_cols, trained_model, trained_tokenizer, round_nm, 'external')
+    model_testing(ex_test_data, ex_label_cols, trained_model, trained_tokenizer, max_len, round_nm, 'external')
 
