@@ -124,7 +124,7 @@ if __name__ == '__main__':
     round_nm = args.round
 
     in_train_data, in_test_data, in_label_cols = read_internal_data(round_nm)
-    in_train_data = in_train_data.head(10)
+    # in_train_data = in_train_data.head(10)
     trained_tokenizer, max_len, trained_model = model_training(in_train_data, in_label_cols, round_nm)
     model_testing(in_test_data, in_label_cols, trained_model, trained_tokenizer, max_len, round_nm, 'internal')
 
