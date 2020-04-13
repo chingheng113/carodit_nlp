@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/lstm/carotid_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/lstm/lstm_carotid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+                <state relative-caret-position="204">
+                  <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -46,11 +45,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3917">
-                  <caret line="412" column="35" selection-start-line="412" selection-start-column="35" selection-end-line="412" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#165#174#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -390,7 +386,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="26178000" />
+      <workItem from="1586457073729" duration="26626000" />
     </task>
     <task id="LOCAL-00001" summary="bk">
       <created>1570669489971</created>
@@ -651,11 +647,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586699825856</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="bk">
+      <created>1586746685006</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1586746685006</updated>
+    </task>
+    <task id="LOCAL-00039" summary="bk">
+      <created>1586750458488</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1586750458488</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58055000" />
+    <option name="totallyTimeSpent" value="58503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,6 +678,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13980465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1006,18 +1017,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3917">
-          <caret line="412" column="35" selection-start-line="412" selection-start-column="35" selection-end-line="412" selection-end-column="35" />
-          <folding>
-            <element signature="e#165#174#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
