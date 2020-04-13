@@ -9,6 +9,7 @@ from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 import pickle
+import time
 
 def setup_parser():
     parser = argparse.ArgumentParser()
@@ -86,6 +87,7 @@ def model_training(config, train, label_cols, round_n):
     config['n_class'] = len(label_cols)
     config['input_dim'] = len(tokenizer.word_counts)+2
     config['output_dim'] = 128
+    start = time.time()
     # model
     model = Sequential(name='lstm_'+round_n)
     model.add(Embedding(input_dim=config['input_dim'], output_dim=config['output_dim'], input_length=MAX_SENTENCE_LENGTH))
@@ -104,9 +106,15 @@ def model_training(config, train, label_cols, round_n):
                             ModelCheckpoint(os.path.join('models', model.name+'.h5'),
                                             save_best_only=True, verbose=1)
                         ])
+    end = time.time()
+    elapse = end - start
     # History
     with open(os.path.join('results', 'internal', 'round_'+round_n, 'history_'+round_n+'.pickle'), 'wb') as file_pi:
         pickle.dump(history.history, file_pi)
+
+    with open(os.path.join('results', 'internal', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
+        pickle.dump(elapse, file_pi)
+
     return tokenizer, MAX_SENTENCE_LENGTH, model
 
 
