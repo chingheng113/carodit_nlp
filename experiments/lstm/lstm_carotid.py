@@ -57,14 +57,15 @@ def read_external_data(n):
 
 
 def model_training(train, label_cols, round_n):
-    x_train = train[['processed_content']]
+    x_train = train['processed_content']
     y_train = train[label_cols]
     # tokenize
     tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
     tokenizer.fit_on_texts(x_train)
     t2s_train = tokenizer.texts_to_sequences(x_train)
     # padding
-    MAX_SENTENCE_LENGTH = max(t2s_train, key=len)
+    # max(len(max(t2s_train, key=len)), len(max(t2s_test, key=len)))
+    MAX_SENTENCE_LENGTH = len(max(t2s_train, key=len))
     t2s_train_pad = sequence.pad_sequences(t2s_train, maxlen=MAX_SENTENCE_LENGTH)
     # data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
     # config
@@ -100,7 +101,7 @@ def model_training(train, label_cols, round_n):
 
 
 def model_testing(testing, label_cols, model, tokenizer, round_n, ex_in):
-    x_test = testing[['processed_content']]
+    x_test = testing['processed_content']
     y_test = testing[label_cols]
     # tokenize
     t2s_test = tokenizer.texts_to_sequences(x_test)
