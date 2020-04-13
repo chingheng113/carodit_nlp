@@ -106,7 +106,7 @@ def model_testing(testing, label_cols, model, tokenizer, round_n, ex_in):
     # tokenize
     t2s_test = tokenizer.texts_to_sequences(x_test)
     # padding
-    MAX_SENTENCE_LENGTH = max(t2s_test, key=len)
+    MAX_SENTENCE_LENGTH = len(max(t2s_test, key=len))
     t2s_test_pad = sequence.pad_sequences(t2s_test, maxlen=MAX_SENTENCE_LENGTH)
     # data_util.save_variable([t2s_test_pad, Y_test], 'testing_data.pickle')
     y_pred_p = model.predict(t2s_test_pad)
