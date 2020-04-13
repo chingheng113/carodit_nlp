@@ -51,7 +51,7 @@ def read_internal_data(n):
 
 
 def read_external_data(n):
-    test_data = pd.read_csv(os.path.join('..', 'data', 'external', 'round_'+n, 'testing_'+n+'.csv'))
+    test_data = pd.read_csv(os.path.join('..', 'data', 'external', 'testing.csv'))
     label_cols = list(test_data.columns)[2:-1]
     return test_data, label_cols
 
