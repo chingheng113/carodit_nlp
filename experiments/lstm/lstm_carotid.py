@@ -1,8 +1,5 @@
 import pandas as pd
-import numpy as np
 import os
-import sys
-import re
 import argparse
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
@@ -11,9 +8,7 @@ from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM
 from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
-from pathlib import Path
-from carotid_data import data_util
-
+import pickle
 
 def setup_parser():
     parser = argparse.ArgumentParser()
@@ -99,7 +94,8 @@ def model_training(train, label_cols, round_n):
                                             save_best_only=True, verbose=1)
                         ])
     # History
-    data_util.save_variable(history.history, os.path.join('results', 'internal', 'round_'+round_n, 'history_'+round_n+'.pickle'))
+    with open(os.path.join('results', 'internal', 'round_'+round_n, 'history_'+round_n+'.pickle'), 'wb') as file_pi:
+        pickle.dump(history.history, file_pi)
     return tokenizer, model
 
 
