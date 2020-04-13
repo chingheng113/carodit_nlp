@@ -12,6 +12,21 @@ import pickle
 
 def setup_parser():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--batch_size",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="batch size")
+    parser.add_argument("--epochs",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="epochs")
+    parser.add_argument("--n_hidden",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="n_hidden")
     parser.add_argument("--round",
                         default=None,
                         type=str,
@@ -56,7 +71,7 @@ def read_external_data(n):
     return test_data, label_cols
 
 
-def model_training(train, label_cols, round_n):
+def model_training(config, train, label_cols, round_n):
     x_train = train['processed_content']
     y_train = train[label_cols]
     # tokenize
@@ -68,11 +83,6 @@ def model_training(train, label_cols, round_n):
     MAX_SENTENCE_LENGTH = len(max(t2s_train, key=len))
     t2s_train_pad = sequence.pad_sequences(t2s_train, maxlen=MAX_SENTENCE_LENGTH)
     # data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
-    # config
-    config = dict()
-    config['batch_size'] = 32
-    config['epochs'] = 50
-    config['n_hidden'] = 64
     config['n_class'] = len(label_cols)
     config['input_dim'] = len(tokenizer.word_counts)+2
     config['output_dim'] = 128
@@ -91,7 +101,7 @@ def model_training(train, label_cols, round_n):
                         callbacks=[
                             ReduceLROnPlateau(factor=0.5, patience=int(config['epochs']/10), verbose=1),
                             EarlyStopping(verbose=1, patience=int(config['epochs']/10)),
-                            ModelCheckpoint(os.path.join('results', 'internal', 'round_'+round_n, model.name + '.h5'),
+                            ModelCheckpoint(os.path.join('models', model.name+'.h5'),
                                             save_best_only=True, verbose=1)
                         ])
     # History
@@ -122,10 +132,15 @@ if __name__ == '__main__':
     parser = setup_parser()
     args = parser.parse_args()
     round_nm = args.round
+    # config
+    configuration = dict()
+    configuration['batch_size'] = args.batch_size
+    configuration['epochs'] = args.epochs
+    configuration['n_hidden'] = args.n_hidden
 
     in_train_data, in_test_data, in_label_cols = read_internal_data(round_nm)
     # in_train_data = in_train_data.head(10)
-    trained_tokenizer, max_len, trained_model = model_training(in_train_data, in_label_cols, round_nm)
+    trained_tokenizer, max_len, trained_model = model_training(configuration, in_train_data, in_label_cols, round_nm)
     model_testing(in_test_data, in_label_cols, trained_model, trained_tokenizer, max_len, round_nm, 'internal')
 
     ex_test_data, ex_label_cols = read_external_data(round_nm)
