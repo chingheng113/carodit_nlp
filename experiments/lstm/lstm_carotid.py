@@ -44,14 +44,14 @@ def setup_parser():
 #     text_arr = np.array(text_arr)
 
 def read_internal_data(n):
-    train_data = pd.read_csv('..', 'data', 'internal', 'round_'+n, 'training_'+n+'.csv')
+    train_data = pd.read_csv(os.path.join('..', 'data', 'internal', 'round_'+n, 'training_'+n+'.csv'))
     label_cols = list(train_data.columns)[2:-1]
-    test_data = pd.read_csv('..', 'data', 'internal', 'round_'+n, 'testing_'+n+'.csv')
+    test_data = pd.read_csv(os.path.join('..', 'data', 'internal', 'round_'+n, 'testing_'+n+'.csv'))
     return train_data, test_data, label_cols
 
 
 def read_external_data(n):
-    test_data = pd.read_csv('..', 'data', 'external', 'round_'+n, 'testing_'+n+'.csv')
+    test_data = pd.read_csv(os.path.join('..', 'data', 'external', 'round_'+n, 'testing_'+n+'.csv'))
     label_cols = list(test_data.columns)[2:-1]
     return test_data, label_cols
 
