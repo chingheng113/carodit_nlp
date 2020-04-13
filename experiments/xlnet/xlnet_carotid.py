@@ -326,7 +326,7 @@ def model_testing(trained_model, test_data, label_cols, exin, round_n):
         with open(os.path.join('results', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
     else:
-        with open(os.path.join('results', exin, 'predict_result.pickle'), 'wb') as file_pi:
+        with open(os.path.join('results', exin, 'predict_result_'+round_n+'.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
 
 
