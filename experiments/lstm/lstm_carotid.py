@@ -111,7 +111,10 @@ def model_testing(testing, label_cols, model, tokenizer, max_len, round_n, ex_in
     y_pred_p = model.predict(t2s_test_pad)
     for index, elem in enumerate(label_cols):
         testing[elem + '_pred'] = y_pred_p[:, index]
-    testing.to_csv(os.path.join('results', ex_in, 'round_'+round_n, 'predict_y_'+round_n+'.csv'), index=False)
+    if ex_in == 'internal':
+        testing.to_csv(os.path.join('results', 'internal', 'round_'+round_n, 'predict_y_'+round_n+'.csv'), index=False)
+    else:
+        testing.to_csv(os.path.join('results', 'external', 'predict_y_'+round_n+'.csv'), index=False)
     print('testing done')
 
 
