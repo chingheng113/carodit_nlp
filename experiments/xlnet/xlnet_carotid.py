@@ -319,7 +319,7 @@ def get_train_validation_dataloader(batch_size, train, label_cols):
 
 
 def model_testing(trained_model, test_data, label_cols, exin, round_n):
-    pred_probs = generate_predictions(trained_model, test_data, len(label_cols), device="cuda", batch_size=32)
+    pred_probs = generate_predictions(trained_model, test_data, len(label_cols), device="cuda", batch_size=batch_size)
     for index, elem in enumerate(label_cols):
         test_data[elem+'_pred'] = pred_probs[:, index]
     if exin == 'internal':
