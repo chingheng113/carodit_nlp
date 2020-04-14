@@ -269,7 +269,7 @@ def create_training_testing_data_internal(file_path, n):
 
 def create_training_testing_data_external(file_path):
     test_data = pd.read_csv(os.path.join(file_path, 'testing.csv'))
-    label_cols = list(test_data.columns)[2:-1]
+    label_cols = list(test_data.columns)[2:]
     tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
     test_text_list = test_data["processed_content"].values
     test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=250)
