@@ -61,7 +61,7 @@ def setup_parser():
 
 def read_internal_data(n):
     train_data = pd.read_csv(os.path.join('..', 'data', 'internal', 'round_'+n, 'training_'+n+'.csv'))
-    label_cols = list(train_data.columns)[2:-1]
+    label_cols = list(train_data.columns)[2:]
     test_data = pd.read_csv(os.path.join('..', 'data', 'internal', 'round_'+n, 'testing_'+n+'.csv'))
     return train_data, test_data, label_cols
 
