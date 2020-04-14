@@ -396,16 +396,16 @@ def setup_parser():
 
 
 if __name__ == '__main__':
-    batch_size = 32
-    num_epochs = 3
-    ex_in = 'external'
-    round_num = '0'
-    # parser = setup_parser()
-    # args = parser.parse_args()
-    # batch_size = args.batch_size
-    # num_epochs = args.num_epochs
-    # ex_in = args.ex_in
-    # round_num = args.round_num
+    # batch_size = 32
+    # num_epochs = 3
+    # ex_in = 'external'
+    # round_num = '0'
+    parser = setup_parser()
+    args = parser.parse_args()
+    batch_size = args.batch_size
+    num_epochs = args.num_epochs
+    ex_in = args.ex_in
+    round_num = args.round_num
 
     if ex_in == 'internal':
         train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num)
