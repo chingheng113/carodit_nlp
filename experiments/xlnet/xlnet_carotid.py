@@ -23,6 +23,7 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
         self.xlnet = XLNetModel.from_pretrained('xlnet-base-cased')
+        self.dropout = torch.nn.Dropout(0.1)
         self.classifier = torch.nn.Linear(768, num_labels)
 
         torch.nn.init.xavier_normal_(self.classifier.weight)
