@@ -244,7 +244,7 @@ def tokenize_inputs(text_list, tokenizer, num_embeddings=512):
     return input_ids
 
 
-def create_training_testing_data_internal(file_path, n):
+def create_training_testing_data_internal(file_path, n, num_embeddings):
     train_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'training_'+n+'.csv'))
     test_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'testing_'+n+'.csv'))
     label_cols = list(train_data.columns)[2:]
@@ -252,8 +252,8 @@ def create_training_testing_data_internal(file_path, n):
     tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
     train_text_list = train_data["processed_content"].values
     test_text_list = test_data["processed_content"].values
-    train_input_ids = tokenize_inputs(train_text_list, tokenizer, num_embeddings=250)
-    test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=250)
+    train_input_ids = tokenize_inputs(train_text_list, tokenizer, num_embeddings=num_embeddings)
+    test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=num_embeddings)
 
     train_attention_masks = create_attn_masks(train_input_ids)
     test_attention_masks = create_attn_masks(test_input_ids)
@@ -267,12 +267,12 @@ def create_training_testing_data_internal(file_path, n):
     return train_data, test_data, label_cols
 
 
-def create_training_testing_data_external(file_path):
+def create_training_testing_data_external(file_path, num_embeddings):
     test_data = pd.read_csv(os.path.join(file_path, 'testing.csv'))
     label_cols = list(test_data.columns)[2:]
     tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
     test_text_list = test_data["processed_content"].values
-    test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=250)
+    test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=num_embeddings)
     test_attention_masks = create_attn_masks(test_input_ids)
     # add input ids and attention masks to the dataframe
     test_data["features"] = test_input_ids.tolist()
@@ -381,6 +381,11 @@ def setup_parser():
                         type=int,
                         required=True,
                         help="number of epochs")
+    parser.add_argument("--num_embedding",
+                        default=None,
+                        type=int,
+                        required=True,
+                        help="number of embedding")
     parser.add_argument("--ex_in",
                         default=None,
                         type=str,
@@ -400,20 +405,22 @@ if __name__ == '__main__':
     # num_epochs = 3
     # ex_in = 'external'
     # round_num = '0'
+    # rembedding_num = 512
     parser = setup_parser()
     args = parser.parse_args()
     batch_size = args.batch_size
     num_epochs = args.num_epochs
     ex_in = args.ex_in
     round_num = args.round_num
+    rembedding_num = args.num_embedding
 
     if ex_in == 'internal':
-        train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num)
+        train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num, rembedding_num)
         # train_dataset = train_dataset.head(10)
         model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
-        test_dataset, label_names = create_training_testing_data_external(os.path.join('..', 'data', 'external'))
+        test_dataset, label_names = create_training_testing_data_external(os.path.join('..', 'data', 'external'), rembedding_num)
         model, start_epoch, lowest_eval_loss, train_loss_hist, valid_loss_hist = load_model(os.path.join('models', 'round_'+round_num))
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     else:

@@ -11,7 +11,8 @@ in_cols = ['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA
 for in_col in in_cols:
     aucs = []
     for n in range(10):
-        read_path = os.path.join('results', 'internal', 'round_'+str(n), 'predict_result.pickle')
+        # read_path = os.path.join('results', 'internal', 'round_'+str(n), 'predict_result.pickle')
+        read_path = os.path.join('results', 'external', 'predict_result_'+str(n)+'.pickle')
         with open(read_path, 'rb') as file:
             test_data =pickle.load(file)
             predict_prob = test_data[in_col + '_pred']
