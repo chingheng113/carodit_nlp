@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments/lstm/old_lstm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/lstm/run_lstm.swarm" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/lstm/run_lstm.swarm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3028009">
+    <splitter split-orientation="horizontal" split-proportion="0.42918193">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
@@ -42,7 +43,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
+                <state relative-caret-position="456">
                   <caret line="75" column="38" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
@@ -55,11 +56,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/experiments/lstm/old_lstm.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="35" column="32" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="32" />
+                <state relative-caret-position="956">
+                  <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -84,6 +85,24 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
                   <caret line="9" selection-start-line="9" selection-end-line="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm.swarm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="59" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -141,7 +160,6 @@
         <option value="$PROJECT_DIR$/experiments/lstm/carotid_lstm.py" />
         <option value="$PROJECT_DIR$/experiments/data/external/a.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" />
-        <option value="$PROJECT_DIR$/experiments/lstm/run_lstm.swarm" />
         <option value="$PROJECT_DIR$/experiments/lstm/lstm_carotid.py" />
         <option value="$PROJECT_DIR$/carotid_data/create_carotid2_data.py" />
         <option value="$PROJECT_DIR$/carotid_data/create_train_test.py" />
@@ -151,6 +169,8 @@
         <option value="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" />
         <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet_in.swarm" />
         <option value="$PROJECT_DIR$/experiments/lstm/old_lstm.py" />
+        <option value="$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm" />
+        <option value="$PROJECT_DIR$/experiments/lstm/run_lstm.swarm" />
       </list>
     </option>
   </component>
@@ -203,15 +223,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/carotid_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments/lstm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/carotid_data" />
       <recent name="$PROJECT_DIR$/experiments/lstm" />
+      <recent name="$PROJECT_DIR$/carotid_data" />
       <recent name="$PROJECT_DIR$/experiments/xlnet" />
       <recent name="$PROJECT_DIR$/experiments/xlnet/models" />
       <recent name="$PROJECT_DIR$/experiments/xlnet/results/internal" />
@@ -387,21 +407,7 @@
       <workItem from="1571191144685" duration="36000" />
       <workItem from="1571536722518" duration="2043000" />
       <workItem from="1586399249127" duration="1005000" />
-      <workItem from="1586457073729" duration="49413000" />
-    </task>
-    <task id="LOCAL-00017" summary="bk">
-      <created>1570921152032</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1570921152032</updated>
-    </task>
-    <task id="LOCAL-00018" summary="bk">
-      <created>1570923209344</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1570923209344</updated>
+      <workItem from="1586457073729" duration="49943000" />
     </task>
     <task id="LOCAL-00019" summary="bk">
       <created>1570923897925</created>
@@ -732,11 +738,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586977667958</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="bk">
+      <created>1586983289076</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1586983289076</updated>
+    </task>
+    <task id="LOCAL-00067" summary="bk">
+      <created>1586983410102</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1586983410102</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81290000" />
+    <option name="totallyTimeSpent" value="81820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -749,7 +769,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1935287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -840,13 +859,6 @@
     <SUITE FILE_PATH="coverage/carodit_nlp$a.coverage" NAME="a Coverage Results" MODIFIED="1586791519949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/data/external" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiments/scripts/lstm/round_8.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="56" selection-start-column="56" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/scripts/lstm/round_9.swarm">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1030,13 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="114" lean-forward="true" selection-start-column="63" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/torch/serialization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1124,7 +1129,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="456">
           <caret line="75" column="38" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="38" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -1132,13 +1137,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/lstm/old_lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="956">
+          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm.swarm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
