@@ -1,3 +1,6 @@
+# Due to CUDA out of memory issue, use v100 for testing and lower batch_size...
+#swarm -f run_xlnet_ex.swarm -g 100 -t 6 --time=10-0 --module python/3.6 --gres=gpu:v100:2 --partition=gpu
+
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=16 --num_epochs=5  --ex_in=external --round_num=0
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=16 --num_epochs=5  --ex_in=external --round_num=1
 /data/linc9/conda/envs/carotid_nlp/bin/python3 xlnet_carotid.py --batch_size=16 --num_epochs=5  --ex_in=external --round_num=2

@@ -81,7 +81,8 @@ def model_training(config, train, label_cols, round_n):
     t2s_train = tokenizer.texts_to_sequences(x_train)
     # padding
     # max(len(max(t2s_train, key=len)), len(max(t2s_test, key=len)))
-    MAX_SENTENCE_LENGTH = len(max(t2s_train, key=len))
+    # MAX_SENTENCE_LENGTH = len(max(t2s_train, key=len))
+    MAX_SENTENCE_LENGTH = 500
     t2s_train_pad = sequence.pad_sequences(t2s_train, maxlen=MAX_SENTENCE_LENGTH)
     # data_util.save_variable([t2s_train_pad, Y_train], 'training_data.pickle')
     config['n_class'] = len(label_cols)
