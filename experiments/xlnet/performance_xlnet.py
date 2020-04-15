@@ -21,8 +21,8 @@ in_cols = ['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA
 #             roc_auc = auc(fpr, tpr)
 #             aucs.append(roc_auc)
 #     print(in_col, np.mean(aucs))
-
-
+#
+#
 # read_path = os.path.join('results', 'internal', 'round_0', 'elapse_time.pickle')
 # with open(read_path, 'rb') as file:
 #     elapse_time =pickle.load(file)
@@ -31,7 +31,7 @@ in_cols = ['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA
 
 
 # alone
-read_path = os.path.join('results', 'internal', 'round_3', 'predict_result.pickle')
+read_path = os.path.join('results', 'internal', 'round_9', 'predict_result.pickle')
 # read_path = os.path.join('results', 'external', 'predict_result_'+str(n)+'.pickle')
 for in_col in in_cols:
     with open(read_path, 'rb') as file:
