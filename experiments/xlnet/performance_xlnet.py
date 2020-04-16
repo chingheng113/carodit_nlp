@@ -31,7 +31,7 @@ for in_col in in_cols:
 
 
 # alone
-# read_path = os.path.join('results', 'internal', 'round_7', 'predict_result.pickle')
+# read_path = os.path.join('results', 'internal', 'round_1', 'predict_result.pickle')
 # # read_path = os.path.join('results', 'external', 'predict_result_'+str(n)+'.pickle')
 # for in_col in in_cols:
 #     with open(read_path, 'rb') as file:
