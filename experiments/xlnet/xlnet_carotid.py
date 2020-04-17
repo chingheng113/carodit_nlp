@@ -282,7 +282,7 @@ def create_training_testing_data_external(file_path, num_embeddings):
 
 
 def get_train_validation_dataloader(batch_size, train, label_cols):
-    train, valid = train_test_split(train, test_size=0.2, random_state=42)
+    train, valid = train_test_split(train, test_size=0.1, random_state=42)
 
     X_train = train["features"].values.tolist()
     X_valid = valid["features"].values.tolist()
@@ -337,7 +337,7 @@ def model_training(train_data, label_cols, round_n):
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
 
     model = XLNetForMultiLabelSequenceClassification(num_labels=len(label_cols))
-    optimizer = AdamW(model.parameters(), lr=5e-5, weight_decay=0.01, correct_bias=False)
+    optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False)
     start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
