@@ -32,7 +32,7 @@ def main():
     # read data
     # data = pd.read_csv('/data/linc9/carodit_nlp/carotid_data/carotid_downstream.csv')
     data = pd.read_csv(os.path.join('..', '..', 'carotid_data', 'carotid_downstream.csv'))
-    data = data.head(10)
+    # data = data.head(10)
     data.dropna(subset=['processed_content'], axis=0, inplace=True)
     # Preprocessing
     text_arr = []
