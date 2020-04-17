@@ -30,9 +30,9 @@ def main():
     args = parser.parse_args()
     round_nm = args.round
     # read data
-    data = pd.read_csv('/data/linc9/carodit_nlp/carotid_data/carotid_downstream.csv')
-    # data = pd.read_csv(os.path.join(root_path, 'carotid_data', 'carotid_downstream.csv'))
-    # data = data.loc[0:10, :]
+    # data = pd.read_csv('/data/linc9/carodit_nlp/carotid_data/carotid_downstream.csv')
+    data = pd.read_csv(os.path.join('..', '..', 'carotid_data', 'carotid_downstream.csv'))
+    data = data.head(10)
     data.dropna(subset=['processed_content'], axis=0, inplace=True)
     # Preprocessing
     text_arr = []
@@ -59,7 +59,8 @@ def main():
     label_arr = np.array(label_arr)
     # Train, Test split
     x_train, x_test, Y_train, Y_test = train_test_split(text_arr, label_arr, test_size=0.2, random_state=int(round_nm))
-    # tokenize
+
+     # tokenize
     tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
     tokenizer.fit_on_texts(x_train)
     t2s_train = tokenizer.texts_to_sequences(x_train)
@@ -102,10 +103,12 @@ def main():
         pickle.dump(history.history, file_pi)
     # result
     y_pred_p = model.predict(t2s_test_pad)
+    result = pd.DataFrame(Y_test, columns=['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA',
+                     'LCCA', 'LEICA', 'LIICA', 'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA'])
     for index, elem in enumerate(['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA',
                      'LCCA', 'LEICA', 'LIICA', 'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']):
-        Y_test[elem + '_pred'] = y_pred_p[:, index]
-    Y_test.to_csv(os.path.join('results_old', 'internal', 'round_'+round_nm, 'predict_result_'+round_nm+'.csv'), index=False)
+        result[elem + '_pred'] = y_pred_p[:, index]
+    result.to_csv(os.path.join('results_old', 'internal', 'round_'+round_nm, 'predict_result_'+round_nm+'.csv'), index=False)
     print('done')
 
 
