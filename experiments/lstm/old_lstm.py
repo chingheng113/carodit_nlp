@@ -42,18 +42,20 @@ def main():
                      'LCCA', 'LEICA', 'LIICA', 'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
         corpus = row['CONTENT']
         if '<BASE64>' not in corpus:
-            sentences = corpus.split('\n')
-            processed_sentence = ''
-            for sentence in sentences:
-                if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
-                    # no chinese sentence
-                    if re.search('(>\s*\d+|<\s*\d+)', sentence):
-                        sentence = sentence.replace('>', ' greater ')
-                        sentence = sentence.replace('<', ' less ')
-                    sentence = sentence.replace('%', ' percent')
-                    processed_sentence += sentence+' '
-            processed_sentence = re.sub(' +', ' ', processed_sentence)
-            text_arr.append(processed_sentence)
+            # sentences = corpus.split('\n')
+            # processed_sentence = ''
+            # for sentence in sentences:
+            #     if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
+            #         # no chinese sentence
+            #         if re.search('(>\s*\d+|<\s*\d+)', sentence):
+            #             sentence = sentence.replace('>', ' greater ')
+            #             sentence = sentence.replace('<', ' less ')
+            #         sentence = sentence.replace('%', ' percent')
+            #         processed_sentence += sentence+' '
+            # processed_sentence = re.sub(' +', ' ', processed_sentence)
+            # text_arr.append(processed_sentence)
+            # label_arr.append(label)
+            text_arr.append(corpus)
             label_arr.append(label)
     text_arr = np.array(text_arr)
     label_arr = np.array(label_arr)
