@@ -10,6 +10,8 @@ from keras.models import Sequential
 from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 import pickle
 import time
+import re
+import numpy as np
 
 def setup_parser():
     parser = argparse.ArgumentParser()
@@ -36,28 +38,24 @@ def setup_parser():
     return parser
 
 
-# def text_preprocessing():
-#     text_arr = []
-#     label_arr = []
-#     for index, row in data.iterrows():
-#         label = row[['RCCA', 'REICA', 'RIICA', 'RACA', 'RMCA', 'RPCA', 'REVA', 'RIVA', 'BA',
-#                      'LCCA', 'LEICA', 'LIICA', 'LACA', 'LMCA', 'LPCA', 'LEVA', 'LIVA']].values
-#         corpus = row['CONTENT']
-#         if '<BASE64>' not in corpus:
-#             sentences = corpus.split('\n')
-#             processed_sentence = ''
-#             for sentence in sentences:
-#                 if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
-#                     # no chinese sentence
-#                     if re.search('(>\s*\d+|<\s*\d+)', sentence):
-#                         sentence = sentence.replace('>', ' greater ')
-#                         sentence = sentence.replace('<', ' less ')
-#                     sentence = sentence.replace('%', ' percent')
-#                     processed_sentence += sentence + ' '
-#             processed_sentence = re.sub(' +', ' ', processed_sentence)
-#             text_arr.append(processed_sentence)
-#             label_arr.append(label)
-#     text_arr = np.array(text_arr)
+def text_preprocessing(ser):
+    text_arr = []
+    for index, corpus in ser.iteritems():
+        if '<BASE64>' not in corpus:
+            sentences = corpus.split('\n')
+            processed_sentence = ''
+            for sentence in sentences:
+                if len(re.findall(r'[\u4e00-\u9fff]+', sentence)) == 0:
+                    # no chinese sentence
+                    if re.search('(>\s*\d+|<\s*\d+)', sentence):
+                        sentence = sentence.replace('>', ' greater ')
+                        sentence = sentence.replace('<', ' less ')
+                    sentence = sentence.replace('%', ' percent')
+                    processed_sentence += sentence + ' '
+            processed_sentence = re.sub(' +', ' ', processed_sentence)
+            text_arr.append(processed_sentence)
+    text_arr = np.array(text_arr)
+    return text_arr
 
 def read_internal_data(n):
     train_data = pd.read_csv(os.path.join('..', 'data', 'internal', 'round_'+n, 'training_'+n+'.csv'))
@@ -74,6 +72,7 @@ def read_external_data(n):
 
 def model_training(config, train, label_cols, round_n):
     x_train = train['processed_content']
+    x_train = text_preprocessing(x_train)
     y_train = train[label_cols]
     # tokenize
     tokenizer = Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~ ')
@@ -121,6 +120,7 @@ def model_training(config, train, label_cols, round_n):
 
 def model_testing(testing, label_cols, model, tokenizer, max_len, round_n, ex_in):
     x_test = testing['processed_content']
+    x_test = text_preprocessing(x_test)
     y_test = testing[label_cols]
     # tokenize
     t2s_test = tokenizer.texts_to_sequences(x_test)
