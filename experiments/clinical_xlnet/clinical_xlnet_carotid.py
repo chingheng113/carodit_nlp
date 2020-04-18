@@ -23,7 +23,7 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
         # initialize xlnet config
-        config = XLNetConfig.from_pretrained('../pretrained_model', num_labels=1)
+        config = XLNetConfig.from_pretrained(os.path.join('..', 'pretrained_model'), num_labels=1)
         print(config)
         # load pretrained model
         self.xlnet = clinical_xlnet_seq(config)

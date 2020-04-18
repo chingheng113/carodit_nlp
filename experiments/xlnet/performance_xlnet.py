@@ -23,6 +23,10 @@ for in_col in in_cols:
     print(in_col, np.mean(aucs))
 
 
+# ROC curves should be used when there are roughly equal numbers of observations for each class.
+# Precision-Recall curves should be used when there is a moderate to large class imbalance.
+
+
 # read_path = os.path.join('results', 'internal', 'round_0', 'elapse_time.pickle')
 # with open(read_path, 'rb') as file:
 #     elapse_time =pickle.load(file)
@@ -32,7 +36,7 @@ for in_col in in_cols:
 
 # alone
 # read_path = os.path.join('results', 'internal', 'round_1', 'predict_result.pickle')
-# # read_path = os.path.join('results', 'external', 'predict_result_'+str(n)+'.pickle')
+# # read_path = os.path.join('results_10', 'external', 'predict_result_1.pickle')
 # for in_col in in_cols:
 #     with open(read_path, 'rb') as file:
 #         test_data =pickle.load(file)

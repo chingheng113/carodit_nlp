@@ -13,8 +13,8 @@ for in_col in in_cols:
     aucs = []
     for n in range(10):
         # read_path = os.path.join('results', 'internal', 'round_' + str(n), 'predict_result_' + str(n) + '.csv')
-        # read_path = os.path.join('results', 'external', 'predict_result_' + str(n) + '.csv')
-        read_path = os.path.join('results_old', 'internal', 'round_' + str(n), 'predict_result_' + str(n) + '.csv')
+        read_path = os.path.join('results', 'external', 'predict_result_' + str(n) + '.csv')
+        # read_path = os.path.join('results_old', 'internal', 'round_' + str(n), 'predict_result_' + str(n) + '.csv')
         test_data = pd.read_csv(read_path)
         predict_prob = test_data[in_col+'_pred']
         true_label = test_data[in_col]
