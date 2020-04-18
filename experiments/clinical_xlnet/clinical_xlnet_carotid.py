@@ -15,14 +15,19 @@ from tqdm import tqdm, trange
 import pickle
 import time
 import argparse
-
+from models_xlnet import clinical_xlnet_seq
 
 class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
 
     def __init__(self, num_labels=2):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
-        self.xlnet = XLNetModel.from_pretrained('../pretrained_model')
+        # initialize xlnet config
+        config = XLNetConfig.from_pretrained('../pretrained_model', num_labels=1)
+        print(config)
+        # load pretrained model
+        self.xlnet = clinical_xlnet_seq(config)
+        # self.xlnet = XLNetModel.from_pretrained('../pretrained_model')
         self.dropout = torch.nn.Dropout(0.1)
         self.classifier = torch.nn.Linear(768, num_labels)
 
