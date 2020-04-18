@@ -1,0 +1,13 @@
+# Due to CUDA out of memory issue, use v100 for testing and lower batch_size...
+#swarm -f run_clinical_xlnet_ex.swarm -g 100 -t 6 --time=24:00:00 --module python/3.7 --gres=gpu:v100:2 --partition=gpu
+
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=0
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=1
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=2
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=3
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=4
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=5
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=6
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=7
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=8
+/data/linc9/conda/envs/carotid_nlp/bin/python3 clinical_xlnet_carotid.py --batch_size=16 --num_epochs=0 --num_embedding=400 --ex_in=external --round_num=9
