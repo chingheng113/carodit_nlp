@@ -15,7 +15,6 @@ from tqdm import tqdm, trange
 import pickle
 import time
 import argparse
-from models_xlnet import clinical_xlnet_seq
 
 class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
 
@@ -23,11 +22,8 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
         # initialize xlnet config
-        config = XLNetConfig.from_pretrained(os.path.join('..', 'pretrained_model'), num_labels=1)
-        print(config)
-        # load pretrained model
-        self.xlnet = clinical_xlnet_seq(config)
-        # self.xlnet = XLNetModel.from_pretrained('../pretrained_model')
+        config = XLNetConfig.from_pretrained('/data/linc9/carodit_nlp/experiments/clinical_xlnet/pretrained_model/config.json ', num_labels=1)
+        self.xlnet = XLNetModel(config)
         self.dropout = torch.nn.Dropout(0.1)
         self.classifier = torch.nn.Linear(768, num_labels)
 
@@ -422,7 +418,7 @@ if __name__ == '__main__':
 
     if ex_in == 'internal':
         train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num, rembedding_num)
-        # train_dataset = train_dataset.head(10)
+        train_dataset = train_dataset.head(10)
         model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
