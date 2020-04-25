@@ -21,11 +21,9 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
     def __init__(self, num_labels=2):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
-        # method 1, initialize xlnet config
-        # config = XLNetConfig.from_pretrained('/data/linc9/carodit_nlp/experiments/clinical_xlnet/pretrained_model/config.json ', num_labels=1)
-        # self.xlnet = XLNetModel(config)
-        # method 2
-        self.xlnet = XLNetModel.from_pretrained('/data/linc9/carodit_nlp/experiments/clinical_xlnet/pretrained_model/')
+        # initialize xlnet config
+        config = XLNetConfig.from_pretrained('/data/linc9/carodit_nlp/experiments/clinical_xlnet/pretrained_model/config.json ', num_labels=num_labels)
+        self.xlnet = XLNetModel(config)
         self.dropout = torch.nn.Dropout(0.1)
         self.classifier = torch.nn.Linear(768, num_labels)
 
@@ -340,7 +338,7 @@ def model_training(train_data, label_cols, round_n):
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
 
     model = XLNetForMultiLabelSequenceClassification(num_labels=len(label_cols))
-    optimizer = AdamW(model.parameters(), lr=1e-5, weight_decay=0.01, correct_bias=False)
+    optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False)
     start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
