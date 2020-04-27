@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 import argparse
-import keras as K
+import keras.backend as K
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing import sequence
 from keras.layers.core import Activation, Dense
