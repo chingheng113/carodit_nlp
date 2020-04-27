@@ -1,0 +1,11 @@
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=0
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=1
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=2
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=3
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=4
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=5
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=6
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=7
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=8
+/data/linc9/conda/envs/carotid_nlp/bin/python3 lstm_carotid_hn.py --batch_size=32 --epochs=50 --n_hidden=64 --round=9
+
