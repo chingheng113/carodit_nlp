@@ -130,6 +130,9 @@ def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
             logits = outputs[0]
             # Move logits to CPU
             logits = logits.detach().cpu().numpy()
+            print(";;;;;")
+            print(logits)
+            print(np.argmax(logits, axis=1))
             pred_probs = np.vstack([pred_probs, logits])
 
     return pred_probs
