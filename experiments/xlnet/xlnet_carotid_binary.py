@@ -85,8 +85,6 @@ def train(model, num_epochs, optimizer, train_dataloader, valid_dataloader,
             with torch.no_grad():
                 # Forward pass, calculate validation loss
                 outputs = model(b_input_ids, attention_mask=b_input_mask, labels=b_labels)
-                print('+++++++++')
-                print(outputs)
                 loss, logits = outputs[:2]
                 # store valid loss
                 eval_loss += loss.item()
@@ -129,10 +127,6 @@ def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
         masks = masks.to(device)
         with torch.no_grad():
             outputs = model(input_ids=X, attention_mask=masks)
-            print('**********')
-            print(outputs)
-            print('-----')
-            print(outputs[:2])
             logits = outputs[0]
             logits = logits.sigmoid().detach().cpu().numpy()
             pred_probs = np.vstack([pred_probs, logits])
@@ -380,7 +374,7 @@ if __name__ == '__main__':
 
     if ex_in == 'internal':
         train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num, rembedding_num)
-        train_dataset = train_dataset.head(5)
+        # train_dataset = train_dataset.head(5)
         model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
