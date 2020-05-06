@@ -281,8 +281,8 @@ def get_train_validation_dataloader(batch_size, train, label_cols):
 
 def model_testing(trained_model, test_data, label_cols, exin, round_n):
     pred_probs = generate_predictions(trained_model, test_data, 2, device="cuda", batch_size=batch_size)
-    for index, elem in enumerate(label_cols):
-        test_data[elem+'_pred'] = pred_probs[:, index]
+    test_data['stenosis_0' + '_pred'] = pred_probs[:, 0]
+    test_data['stenosis_1' + '_pred'] = pred_probs[:, 1]
     if exin == 'internal':
         with open(os.path.join('results_binary', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
