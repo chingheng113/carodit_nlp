@@ -133,7 +133,7 @@ def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
             print(outputs)
             print('-----')
             print(outputs[:2])
-            logits = outputs[1]
+            logits = outputs[0]
             logits = logits.sigmoid().detach().cpu().numpy()
             pred_probs = np.vstack([pred_probs, logits])
 
