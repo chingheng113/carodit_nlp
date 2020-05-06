@@ -200,10 +200,10 @@ def tokenize_inputs(text_list, tokenizer, num_embeddings=512):
 
 def create_training_testing_data_internal(file_path, n, num_embeddings):
     train_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'training_'+n+'.csv'))
-    train_data['stanosis'] = np.where(train_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
+    train_data['stenosis'] = np.where(train_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
     test_data = pd.read_csv(os.path.join(file_path, 'round_'+n, 'testing_'+n+'.csv'))
-    test_data['stanosis'] = np.where(test_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
-    label_cols = ['stanosis']
+    test_data['stenosis'] = np.where(test_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
+    label_cols = ['stenosis']
 
     tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
     train_text_list = train_data["processed_content"].values
@@ -225,8 +225,8 @@ def create_training_testing_data_internal(file_path, n, num_embeddings):
 
 def create_training_testing_data_external(file_path, num_embeddings):
     test_data = pd.read_csv(os.path.join(file_path, 'testing.csv'))
-    test_data['stanosis'] = np.where(test_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
-    label_cols = ['stanosis']
+    test_data['stenosis'] = np.where(test_data.iloc[:, 2:].sum(axis=1) > 0, 1, 0)
+    label_cols = ['stenosis']
     tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased', do_lower_case=False)
     test_text_list = test_data["processed_content"].values
     test_input_ids = tokenize_inputs(test_text_list, tokenizer, num_embeddings=num_embeddings)
@@ -294,7 +294,7 @@ def model_training(train_data, label_cols, round_n):
 
     model = XLNetForSequenceClassification.from_pretrained('xlnet-base-cased', num_labels=2)
 
-    optimizer = AdamW(model.parameters(), lr=1e-5, weight_decay=0.01, correct_bias=False) # 2e-5
+    optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False) # 2e-5
     start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
