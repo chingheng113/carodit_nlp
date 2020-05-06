@@ -128,7 +128,7 @@ def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
         with torch.no_grad():
             outputs = model(input_ids=X, attention_mask=masks)
             m = torch.nn.Sigmoid()
-            logits = torch.squeeze(m(outputs))
+            logits = torch.squeeze(m(outputs[0]))
             logits = logits.detach().cpu().numpy()
             pred_probs = np.vstack([pred_probs, logits])
 
