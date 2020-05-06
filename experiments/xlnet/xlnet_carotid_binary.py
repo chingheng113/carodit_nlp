@@ -292,7 +292,7 @@ def model_training(train_data, label_cols, round_n):
 
     optimizer = AdamW(model.parameters(), lr=1e-5, weight_decay=0.01, correct_bias=False) # 2e-5
     start = time.time()
-    model, train_loss_set, valid_loss_set = model.train(model=model,
+    model, train_loss_set, valid_loss_set = model.train(
                                                   num_epochs=num_epochs,
                                                   optimizer=optimizer,
                                                   train_dataloader=train_dataloader,
