@@ -127,8 +127,8 @@ def generate_predictions(model, df, num_labels, device="cpu", batch_size=32):
         masks = masks.to(device)
         with torch.no_grad():
             outputs = model(input_ids=X, attention_mask=masks)
-            m = torch.nn.Sigmoid()
-            logits = torch.squeeze(m(outputs[0]))
+            logits = outputs[0]
+            # Move logits to CPU
             logits = logits.detach().cpu().numpy()
             pred_probs = np.vstack([pred_probs, logits])
 
@@ -375,8 +375,8 @@ if __name__ == '__main__':
 
     if ex_in == 'internal':
         train_dataset, test_dataset, label_names = create_training_testing_data_internal(os.path.join('..', 'data', 'internal'), round_num, rembedding_num)
-        # train_dataset = train_dataset.head(5)
-        # test_dataset = test_dataset.head(5)
+        train_dataset = train_dataset.head(5)
+        test_dataset = test_dataset.head(5)
         model, train_loss_set, valid_loss_set = model_training(train_dataset, label_names, round_num)
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
