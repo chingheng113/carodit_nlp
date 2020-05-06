@@ -47,7 +47,8 @@ def train(model, num_epochs, optimizer, train_dataloader, valid_dataloader,
             # Clear out the gradients (by default they accumulate)
             optimizer.zero_grad()
             # Forward pass
-            loss = model(b_input_ids, attention_mask=b_input_mask, labels=b_labels)
+            outputs = model(b_input_ids, attention_mask=b_input_mask, labels=b_labels)
+            loss, logits = outputs[:2]
 
             # store train loss
             tr_loss += loss.item()
