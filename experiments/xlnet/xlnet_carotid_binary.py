@@ -85,6 +85,8 @@ def train(model, num_epochs, optimizer, train_dataloader, valid_dataloader,
             with torch.no_grad():
                 # Forward pass, calculate validation loss
                 outputs = model(b_input_ids, attention_mask=b_input_mask, labels=b_labels)
+                print('+++++++++')
+                print(outputs)
                 loss, logits = outputs[:2]
                 # store valid loss
                 eval_loss += loss.item()
