@@ -160,7 +160,7 @@ def load_model(save_path):
     """
     checkpoint = torch.load(save_path)
     model_state_dict = checkpoint['state_dict']
-    model = XLNetForSequenceClassification(num_labels=model_state_dict["classifier.weight"].size()[0])
+    model = XLNetForSequenceClassification(num_labels=2)
     model.load_state_dict(model_state_dict)
     epochs = checkpoint["epochs"]
     lowest_eval_loss = checkpoint["lowest_eval_loss"]
