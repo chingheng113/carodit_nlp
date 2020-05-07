@@ -298,7 +298,7 @@ def model_training(train_data, label_cols, round_n):
 
     model = XLNetForSequenceClassification.from_pretrained('xlnet-base-cased', num_labels=2)
 
-    optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False) # 2e-5
+    optimizer = AdamW(model.parameters(), lr=1e-5, weight_decay=0.01, correct_bias=False) # 2e-5
     start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
