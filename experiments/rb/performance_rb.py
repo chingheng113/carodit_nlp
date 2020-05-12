@@ -10,12 +10,14 @@ labels = ['RIICA', 'RACA', 'RMCA', 'RPCA', 'RIVA', 'BA', 'LIICA', 'LACA', 'LMCA'
 
 
 result = pd.read_csv('external.csv')
+# result = pd.read_csv(os.path.join('internal', 'data_compare_0.csv'))
 for label in labels:
     true_label = result[label]
     pred_label = result[label+'1']
     print(label)
-    print(classification_report(true_label, pred_label))
+    # print(classification_report(true_label, pred_label))
     cm = confusion_matrix(true_label, pred_label)
+    # print(cm)
     sensitivity = float(cm[0][0]) / np.sum(cm[0])
     specificity = float(cm[1][1]) / np.sum(cm[1])
     print(sensitivity)
