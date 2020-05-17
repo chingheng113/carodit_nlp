@@ -338,7 +338,7 @@ def model_training(train_data, label_cols, round_n):
     model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
 
     model = XLNetForMultiLabelSequenceClassification(num_labels=len(label_cols))
-    optimizer = AdamW(model.parameters(), lr=2e-5, weight_decay=0.01, correct_bias=False) # 1e-5 so bad...
+    optimizer = AdamW(model.parameters(), lr=5e-6, weight_decay=0.01, correct_bias=False) # 1e-5, 2e-5 so bad...
     start = time.time()
     model, train_loss_set, valid_loss_set = train(model=model,
                                                   num_epochs=num_epochs,
