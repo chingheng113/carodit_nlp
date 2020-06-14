@@ -58,8 +58,8 @@ for col in cols:
     ps = []
     lr_prs, lr_res = [], []
     for n in range(10):
-        # read_path = os.path.join('clinical_xlnet', 'results', 'internal', 'round_' + str(n), 'predict_result.pickle')
-        read_path = os.path.join('clinical_xlnet', 'results', 'external', 'predict_result_'+ str(n) +'.pickle')
+        read_path = os.path.join('clinical_xlnet', 'results', 'internal', 'round_' + str(n), 'predict_result.pickle')
+        # read_path = os.path.join('clinical_xlnet', 'results', 'external', 'predict_result_'+ str(n) +'.pickle')
         with open(read_path, 'rb') as file:
             test_data =pickle.load(file)
             predict_prob = test_data[col + '_pred']
