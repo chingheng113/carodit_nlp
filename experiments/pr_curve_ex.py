@@ -88,6 +88,7 @@ for inx, col in enumerate(cols):
     ax.set_title(col)
 
 fig.delaxes(axs[2,3])
+fig.tight_layout()
 pyplot.show()
 
 fig.savefig('externalPR.png', dpi=300)
