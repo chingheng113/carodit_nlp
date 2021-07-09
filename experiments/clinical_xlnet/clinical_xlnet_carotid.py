@@ -22,7 +22,7 @@ class XLNetForMultiLabelSequenceClassification(torch.nn.Module):
         super(XLNetForMultiLabelSequenceClassification, self).__init__()
         self.num_labels = num_labels
         # initialize xlnet config
-        config = XLNetConfig.from_pretrained('/data/linc9/carodit_nlp/experiments/clinical_xlnet/pretrained_model/config.json ', num_labels=num_labels)
+        config = XLNetConfig.from_pretrained('D:\Projects\carodit_nlp\experiments\clinical_xlnet\pretrained_model\config.json', num_labels=num_labels)
         self.xlnet = XLNetModel(config)
         self.dropout = torch.nn.Dropout(0.1)
         self.classifier = torch.nn.Linear(768, num_labels)

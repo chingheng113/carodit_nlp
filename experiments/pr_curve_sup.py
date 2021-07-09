@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.metrics import precision_recall_curve
-from scipy import interp
+from numpy import interp
 from sklearn.metrics import f1_score
 from sklearn.metrics import auc
 from matplotlib import pyplot
