@@ -324,17 +324,17 @@ def model_testing(trained_model, test_data, label_cols, exin, round_n):
     for index, elem in enumerate(label_cols):
         test_data[elem+'_pred'] = pred_probs[:, index]
     if exin == 'internal':
-        with open(os.path.join('results', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
+        with open(os.path.join('results_20_1e-5', exin, 'round_' + round_n, 'predict_result.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
     else:
-        with open(os.path.join('results', exin, 'predict_result_'+round_n+'.pickle'), 'wb') as file_pi:
+        with open(os.path.join('results_20_1e-5', exin, 'predict_result_'+round_n+'.pickle'), 'wb') as file_pi:
             pickle.dump(test_data, file_pi)
 
 
 def model_training(train_data, label_cols, round_n):
     train_dataloader, validation_dataloader = get_train_validation_dataloader(batch_size, train_data, label_cols)
 
-    model_save_path = output_model_file = os.path.join('models', 'round_'+round_n)
+    model_save_path = output_model_file = os.path.join('models_20_1e-5', 'round_'+round_n)
 
     model = XLNetForMultiLabelSequenceClassification(num_labels=len(label_cols))
     optimizer = AdamW(model.parameters(), lr=1e-5, weight_decay=0.01, correct_bias=False) # 2e-5
@@ -363,7 +363,7 @@ def model_training(train_data, label_cols, round_n):
     #                                               device="cuda")
     end = time.time()
     elapse = end - start
-    with open(os.path.join('results', 'internal', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
+    with open(os.path.join('results_20_1e-5', 'internal', 'round_'+round_n, 'elapse_time.pickle'), 'wb') as file_pi:
         pickle.dump(elapse, file_pi)
     return model, train_loss_set, valid_loss_set
 
@@ -422,7 +422,7 @@ if __name__ == '__main__':
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     elif ex_in == 'external':
         test_dataset, label_names = create_training_testing_data_external(os.path.join('..', 'data', 'external'), rembedding_num)
-        model, start_epoch, lowest_eval_loss, train_loss_hist, valid_loss_hist = load_model(os.path.join('models', 'round_'+round_num))
+        model, start_epoch, lowest_eval_loss, train_loss_hist, valid_loss_hist = load_model(os.path.join('models_20_1e-5', 'round_'+round_num))
         model_testing(model, test_dataset, label_names, ex_in, round_num)
     else:
         print('internal or external ?')
