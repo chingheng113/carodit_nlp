@@ -2,127 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2712855b-a919-43a0-9581-e609a65698b6" name="Default Changelist" comment="bk">
-      <change afterPath="$PROJECT_DIR$/experiments/rb/performance_rb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/models_5_2e-5/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/external/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_0/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_1/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_2/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_3/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_4/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_5/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_6/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_7/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_8/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_9/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/hyperparameter/results_20_1e-5/internal/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/carodit_nlp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/carodit_nlp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/lstm/performance_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/lstm/performance_lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/hyperparameter/results_20_1e-5/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/hyperparameter/results_20_1e-5/external/.gitkeep" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7572519">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-                  <folding>
-                    <element signature="e#0#42#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/run_clinical_xlnet_in.swarm">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="155" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="155" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#165#174#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/models_xlnet.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/transformers/modeling_utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4215">
-                  <caret line="298" column="8" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/experiments/lstm/performance_lstm.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" selection-start-line="8" selection-end-line="9" />
-                  <folding>
-                    <element signature="e#0#42#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1965">
-                  <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm.swarm">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" selection-start-line="11" selection-end-line="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,146 +20,51 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>round</find>
-      <find>train</find>
-      <find>round_nm</find>
-      <find>train_data</find>
-      <find>internal</find>
-      <find>leng</find>
-      <find>tokenize_inputs</find>
-      <find>toke</find>
-      <find>token</find>
-      <find>learn</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/my_lstm.py" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_0.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_1.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_2.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_3.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_4.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_5.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_6.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_7.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_8.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/scripts/round_9.swarm" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/best_model_test.py" />
-        <option value="$PROJECT_DIR$/stand_alone/run.swarm" />
-        <option value="$PROJECT_DIR$/stand_alone/my_lstm.py" />
-        <option value="$PROJECT_DIR$/carotid_data/data_util.py" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/see.py" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/performance.py" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/performance_all.py" />
-        <option value="$PROJECT_DIR$/part_of_clinicalBERT/carotid_lstm.py" />
-        <option value="$PROJECT_DIR$/carotid_data/create_train_tes.py" />
-        <option value="$PROJECT_DIR$/experiments/lstm/carotid_lstm.py" />
-        <option value="$PROJECT_DIR$/experiments/data/external/a.py" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet.swarm" />
-        <option value="$PROJECT_DIR$/carotid_data/create_carotid2_data.py" />
-        <option value="$PROJECT_DIR$/carotid_data/create_train_test.py" />
-        <option value="$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm" />
-        <option value="$PROJECT_DIR$/experiments/rb/performance_rb.py" />
-        <option value="$PROJECT_DIR$/experiments/lstm/old_lstm.py" />
-        <option value="$PROJECT_DIR$/experiments/lstm/run_lstm.swarm" />
-        <option value="$PROJECT_DIR$/experiments/lstm/lstm_carotid.py" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet_ex.swarm" />
-        <option value="$PROJECT_DIR$/experiments/clinical_xlnet/run_clinical_xlnet_in.swarm" />
-        <option value="$PROJECT_DIR$/experiments/clinical_xlnet/run_clinical_xlnet_ex.swarm" />
-        <option value="$PROJECT_DIR$/experiments/lstm/performance_lstm.py" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/run_xlnet_in.swarm" />
-        <option value="$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py" />
-        <option value="$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py" />
-        <option value="$PROJECT_DIR$/experiments/clinical_xlnet/models_xlnet.py" />
-      </list>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="850" />
-    <option name="width" value="830" />
-    <option name="height" value="1050" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="clinical_xlnet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carodit_nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carodit_nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="stand_alone" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="JupyterTrust" id="5765ca5d-8891-4111-b5fa-b1201fc2a895" />
+  <component name="ProjectId" id="1hXY3ZYaRonIYPjyo9c2vJffagV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiments/hyperparameter/results_20_1e-5/internal" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\carodit_nlp\experiments\hyperparameter\results_20_1e-5\internal" />
+      <recent name="D:\Projects\carodit_nlp\experiments\hyperparameter" />
+      <recent name="D:\Projects\carodit_nlp\experiments\hyperparameter\models" />
+      <recent name="D:\Projects\carodit_nlp\experiments" />
+      <recent name="$PROJECT_DIR$/experiments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\carodit_nlp\experiments\hyperparameter\results_20_1e-5\external" />
       <recent name="$PROJECT_DIR$/experiments/clinical_xlnet/pretrained_model" />
       <recent name="$PROJECT_DIR$/experiments/clinical_xlnet/models" />
       <recent name="$PROJECT_DIR$/experiments/xlnet/results/external" />
       <recent name="$PROJECT_DIR$/experiments/xlnet/results" />
-      <recent name="$PROJECT_DIR$/experiments" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/experiments" />
-      <recent name="$PROJECT_DIR$/experiments/lstm" />
-      <recent name="$PROJECT_DIR$/carotid_data" />
-      <recent name="$PROJECT_DIR$/experiments/xlnet" />
-      <recent name="$PROJECT_DIR$/experiments/xlnet/models" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.performance_xlnet">
-    <configuration name="lstm_carotid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.performance-score">
+    <configuration name="performance-score" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="carodit_nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,56 +72,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/lstm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/lstm/lstm_carotid.py" />
-      <option name="PARAMETERS" value="--batch_size=32 --epochs=50 --n_hidden=64 --round=0" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="old_lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="carodit_nlp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/lstm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/lstm/old_lstm.py" />
-      <option name="PARAMETERS" value="--round=0" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="performance_lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="carodit_nlp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/lstm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/lstm/performance_lstm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/performance-score.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,29 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="performance_rb" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="carodit_nlp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rb" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rb/performance_rb.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="performance_xlnet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="performance_xlnet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="carodit_nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -380,23 +108,90 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pr_curve_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="carodit_nlp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/pr_curve_ex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pr_curve_in (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="carodit_nlp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/pr_curve_in.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pr_curve_sup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="carodit_nlp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/pr_curve_sup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.performance-score" />
+      <item itemvalue="Python.pr_curve_sup" />
+      <item itemvalue="Python.pr_curve_ex" />
+      <item itemvalue="Python.pr_curve_in (1)" />
       <item itemvalue="Python.performance_xlnet" />
-      <item itemvalue="Python.performance_lstm" />
-      <item itemvalue="Python.old_lstm" />
-      <item itemvalue="Python.performance_rb" />
-      <item itemvalue="Python.lstm_carotid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.performance-score" />
         <item itemvalue="Python.performance_xlnet" />
-        <item itemvalue="Python.performance_lstm" />
-        <item itemvalue="Python.lstm_carotid" />
-        <item itemvalue="Python.performance_rb" />
-        <item itemvalue="Python.old_lstm" />
+        <item itemvalue="Python.pr_curve_ex" />
+        <item itemvalue="Python.pr_curve_in (1)" />
+        <item itemvalue="Python.pr_curve_sup" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -423,27 +218,30 @@
       <workItem from="1586457073729" duration="51834000" />
       <workItem from="1587045406929" duration="21153000" />
       <workItem from="1587181725107" duration="8568000" />
-    </task>
-    <task id="LOCAL-00044" summary="bk">
-      <created>1586753008999</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1586753008999</updated>
-    </task>
-    <task id="LOCAL-00045" summary="bk">
-      <created>1586753347780</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1586753347780</updated>
-    </task>
-    <task id="LOCAL-00046" summary="bk">
-      <created>1586753746963</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1586753746963</updated>
+      <workItem from="1600158709222" duration="2876000" />
+      <workItem from="1600161806010" duration="1111000" />
+      <workItem from="1600335845988" duration="73000" />
+      <workItem from="1600908938852" duration="9234000" />
+      <workItem from="1603761746854" duration="5282000" />
+      <workItem from="1603783804090" duration="5178000" />
+      <workItem from="1604026767463" duration="925000" />
+      <workItem from="1604148323986" duration="7000" />
+      <workItem from="1604460774056" duration="10348000" />
+      <workItem from="1604561919576" duration="26000" />
+      <workItem from="1604650429013" duration="618000" />
+      <workItem from="1617678046876" duration="10775000" />
+      <workItem from="1617874100756" duration="1903000" />
+      <workItem from="1617945981846" duration="1127000" />
+      <workItem from="1617948026187" duration="453000" />
+      <workItem from="1617951359838" duration="16000" />
+      <workItem from="1623919246270" duration="737000" />
+      <workItem from="1623920069826" duration="24000" />
+      <workItem from="1623920235479" duration="76000" />
+      <workItem from="1624413160114" duration="4276000" />
+      <workItem from="1625042152332" duration="682000" />
+      <workItem from="1625703147481" duration="8788000" />
+      <workItem from="1625791089974" duration="12527000" />
+      <workItem from="1626676307059" duration="5070000" />
     </task>
     <task id="LOCAL-00047" summary="bk">
       <created>1586753901770</created>
@@ -767,11 +565,29 @@
       <option name="project" value="LOCAL" />
       <updated>1587248388303</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="bk">
+      <created>1625800003526</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1625800003526</updated>
+    </task>
+    <task id="LOCAL-00094" summary="bk">
+      <created>1625818055572</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1625818055572</updated>
+    </task>
+    <task id="LOCAL-00095" summary="bk">
+      <created>1626683557385</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1626683557385</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113432000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -782,36 +598,8 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="850" y="0" width="830" height="1050" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16751269" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35510203" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25510204" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32977462" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4119898" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32977462" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="0" y="0" width="1680" height="1050" id="SciView" order="3" weight="0.1362764" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -822,6 +610,18 @@
         <option value="1" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bk" />
@@ -846,16 +646,6 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py</url>
-          <line>418</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/experiments/lstm/old_lstm.py</url>
           <line>63</line>
           <option name="timeStamp" value="43" />
@@ -865,341 +655,76 @@
           <line>286</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid_binary.py</url>
+          <line>325</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/lstm/lstm_carotid_binary.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py</url>
+          <line>366</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py</url>
+          <line>211</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/carodit_nlp$performance_xlnet.coverage" NAME="performance_xlnet Coverage Results" MODIFIED="1587243417714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/xlnet" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$my_lstm.coverage" NAME="my_lstm Coverage Results" MODIFIED="1570902435050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stand_alone" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$see.coverage" NAME="see Coverage Results" MODIFIED="1570916500286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$carotid_lstm.coverage" NAME="carotid_lstm Coverage Results" MODIFIED="1571544181675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$old_lstm.coverage" NAME="old_lstm Coverage Results" MODIFIED="1587089190931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$create_train_test.coverage" NAME="create_train_test Coverage Results" MODIFIED="1586639521061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carotid_data" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$xlnet_carotid.coverage" NAME="xlnet_carotid Coverage Results" MODIFIED="1587084086072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/xlnet" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$lstm_carotid.coverage" NAME="lstm_carotid Coverage Results" MODIFIED="1587151459891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$pr_curve_ex.coverage" NAME="pr_curve_ex Coverage Results" MODIFIED="1625808965653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$performance_xlnet.coverage" NAME="performance_xlnet Coverage Results" MODIFIED="1626682386856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/xlnet" />
     <SUITE FILE_PATH="coverage/carodit_nlp$performance.coverage" NAME="performance Coverage Results" MODIFIED="1571002382989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
     <SUITE FILE_PATH="coverage/carodit_nlp$performance_rb.coverage" NAME="performance_rb Coverage Results" MODIFIED="1587093187023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rb" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$performance_lstm.coverage" NAME="performance_lstm Coverage Results" MODIFIED="1587221041465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$clinical_xlnet_carotid.coverage" NAME="clinical_xlnet_carotid Coverage Results" MODIFIED="1603785972438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/clinical_xlnet" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$performance_lstm.coverage" NAME="performance_lstm Coverage Results" MODIFIED="1600927207368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$pr_curve_sup.coverage" NAME="pr_curve_sup Coverage Results" MODIFIED="1625797659216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$lstm_carotid_binary.coverage" NAME="lstm_carotid_binary Coverage Results" MODIFIED="1617782310557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$see.coverage" NAME="see Coverage Results" MODIFIED="1570916500286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$create_train_test.coverage" NAME="create_train_test Coverage Results" MODIFIED="1586639521061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carotid_data" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$lstm_carotid.coverage" NAME="lstm_carotid Coverage Results" MODIFIED="1617782554598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$a.coverage" NAME="a Coverage Results" MODIFIED="1586791519949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/data/external" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$carotid_lstm.coverage" NAME="carotid_lstm Coverage Results" MODIFIED="1571544181675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$xlnet_carotid.coverage" NAME="xlnet_carotid Coverage Results" MODIFIED="1617785411320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/xlnet" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$my_lstm.coverage" NAME="my_lstm Coverage Results" MODIFIED="1570902435050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stand_alone" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$pr_curve_in__1_.coverage" NAME="pr_curve_in (1) Coverage Results" MODIFIED="1625808918674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$old_lstm.coverage" NAME="old_lstm Coverage Results" MODIFIED="1587089190931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lstm" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$pr_curve.coverage" NAME="pr_curve Coverage Results" MODIFIED="1625797532060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/carodit_nlp$best_model_test.coverage" NAME="best_model_test Coverage Results" MODIFIED="1570847939920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
+    <SUITE FILE_PATH="coverage/carodit_nlp$performance_score.coverage" NAME="performance-score Coverage Results" MODIFIED="1626682733281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/carodit_nlp$performance_all.coverage" NAME="performance_all Coverage Results" MODIFIED="1571191159235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part_of_clinicalBERT" />
     <SUITE FILE_PATH="coverage/carodit_nlp$create_carotid2_data.coverage" NAME="create_carotid2_data Coverage Results" MODIFIED="1586923274403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carotid_data" />
-    <SUITE FILE_PATH="coverage/carodit_nlp$a.coverage" NAME="a Coverage Results" MODIFIED="1586791519949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/data/external" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_data/carotid_downstream.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stand_alone/best_model_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_data/data_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_nlp.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-753" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/data/internal/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/data/external/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/palyground/performance_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/external/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_1/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_2/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_3/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_4/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_5/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_6/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_7/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_8/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/results_5_2e-5/internal/round_9/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/models_5_2e-5/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/models/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/palyground/performance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/palyground/lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/palyground/try_lstm.py" />
-    <entry file="file://$PROJECT_DIR$/palyground/word_embedding.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/keras_preprocessing/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/data/external/a.py" />
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/torch/serialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="1184" selection-start-line="1184" selection-end-line="1184" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_data/create_train_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stand_alone/my_lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carotid_data/create_carotid2_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/rb/performance_rb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/old_lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="47" column="56" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm_old.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="5178" selection-start-line="5178" selection-end-line="5178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/xlnet_carotid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="341" column="62" lean-forward="true" selection-start-line="341" selection-start-column="62" selection-end-line="341" selection-end-column="62" />
-          <folding>
-            <element signature="e#165#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/run_clinical_xlnet_ex.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="103" selection-start-line="12" selection-start-column="103" selection-end-line="12" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/lstm_carotid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/run_lstm.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/run_xlnet_in.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/transformers/modeling_xlnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="577" column="6" selection-start-line="577" selection-start-column="6" selection-end-line="577" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/pretrained_model/config.json ">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/run_clinical_xlnet_in.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="155" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="155" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/lstm/performance_lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/carodit_nlp/lib/python3.7/site-packages/transformers/modeling_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4215">
-          <caret line="298" column="8" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/run_xlnet_ex.swarm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="110" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/xlnet/performance_xlnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/models_xlnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/clinical_xlnet/clinical_xlnet_carotid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#165#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
