@@ -96,6 +96,7 @@ def model_training(config, train, label_cols, round_n):
     model.add(Dense(config['n_class']))
     model.add(Activation("sigmoid"))
     model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
+    print(model.summary())
     history = model.fit(t2s_train_pad, y_train,
                         batch_size=config['batch_size'],
                         epochs=config['epochs'],

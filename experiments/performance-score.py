@@ -14,8 +14,8 @@ print('xlnet')
 for col in cols:
     aps, accs, prs, res, aucs, f1s = [], [], [], [], [], []
     for n in range(10):
-        read_path = os.path.join('xlnet', 'results', 'internal', 'round_' + str(n), 'predict_result.pickle')
-        # read_path = os.path.join('xlnet', 'results', 'external', 'predict_result_'+ str(n) +'.pickle')
+        # read_path = os.path.join('hyperparameter', 'results_20_1e-5', 'internal', 'round_' + str(n), 'predict_result.pickle')
+        read_path = os.path.join('hyperparameter', 'results_20_1e-5', 'external', 'predict_result_'+ str(n) +'.pickle')
         with open(read_path, 'rb') as file:
             test_data =pickle.load(file)
             predict_prob = test_data[col + '_pred']

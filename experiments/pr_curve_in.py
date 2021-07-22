@@ -29,7 +29,7 @@ for inx, col in enumerate(cols):
 
     for n in range(10):
         # xlnet
-        xlnet_read_path = os.path.join('xlnet', 'results', 'internal', 'round_' + str(n), 'predict_result.pickle')
+        xlnet_read_path = os.path.join('hyperparameter', 'results_20_1e-5', 'internal', 'round_' + str(n), 'predict_result.pickle')
         with open(xlnet_read_path, 'rb') as file:
             xlnet_test_data =pickle.load(file)
             xlnet_predict_prob = xlnet_test_data[col + '_pred']
