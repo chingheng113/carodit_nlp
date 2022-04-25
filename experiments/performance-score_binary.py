@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import os
-from sklearn.metrics import f1_score, matthews_corrcoef, roc_curve, precision_recall_curve, auc
+from sklearn.metrics import f1_score, matthews_corrcoef, roc_curve, precision_recall_curve, auc, roc_auc_score
 from sklearn.metrics import precision_recall_fscore_support, average_precision_score
 
 
@@ -14,8 +14,8 @@ from sklearn.metrics import precision_recall_fscore_support, average_precision_s
 print('xlnet')
 ps = []
 for n in range(10):
-    # read_path = os.path.join('xlnet', 'results_binary', 'internal', 'round_' + str(n), 'predict_result.pickle')
-    read_path = os.path.join('xlnet', 'results_binary', 'external', 'predict_result_'+str(n)+'.pickle')
+    read_path = os.path.join('xlnet', 'results_binary', 'internal', 'round_' + str(n), 'predict_result.pickle')
+    # read_path = os.path.join('xlnet', 'results_binary', 'external', 'predict_result_'+str(n)+'.pickle')
     with open(read_path, 'rb') as file:
         test_data = pickle.load(file)
         a = test_data[['stenosis', 'stenosis_0_pred', 'stenosis_1_pred']]
@@ -27,8 +27,9 @@ for n in range(10):
         predict_label = predict_prob.values.argmax(axis=1)
         # p = f1_score(true_label, predict_label)
         # p = average_precision_score(true_label, predict_prob['stenosis_1_pred'], average='micro')
-        xlnet_precision, xlnet_recall, xlnet_thresholds = precision_recall_curve(true_label, predict_prob['stenosis_1_pred'])
-        p = auc(xlnet_recall, xlnet_precision)
+        # xlnet_precision, xlnet_recall, xlnet_thresholds = precision_recall_curve(true_label, predict_prob['stenosis_1_pred'])
+        # p = auc(xlnet_recall, xlnet_precision)
+        p = roc_auc_score(true_label, predict_prob['stenosis_1_pred'])
         print(p)
         ps.append(p)
 print(round(np.mean(ps), 2), round(np.std(ps), 2))
